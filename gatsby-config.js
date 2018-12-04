@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Wasuwat's - Blog`,
+    title: `wasuwat's thoughts`,
     author: `Wasuwat Limsuparhat`,
     description: 'I write stuff about random things that I find interesting.',
     siteUrl: '',
@@ -26,7 +26,8 @@ module.exports = {
             options: {
               maxWidth: 450,
               withWebp: true,
-              wrapperStyle: 'margin-left:0!important;margin-right:0!important;max-width:400px;',
+              wrapperStyle:
+                'margin-left:0!important;margin-right:0!important;max-width:400px;',
               linkImagesToOriginal: false,
             },
           },
