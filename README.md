@@ -1,5 +1,3 @@
-#### Hello
+#### my blog lives here
 
-```js
-    console.log('hello world')
-```
+[![Build Status](https://travis-ci.org/rappad/blog.svg?branch=master)](https://travis-ci.org/rappad/blog) 
