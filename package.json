@@ -22,9 +22,13 @@
     "typography": "^0.16.17",
     "typography-theme-grand-view": "^0.15.10"
   },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop"
+    "dev": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }
