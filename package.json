@@ -1,6 +1,6 @@
 {
   "name": "wasuwat-personal-blog",
-  "description": "",
+  "description": "My personal blog - powered by Gatsby",
   "version": "1.0.0",
   "author": "Wasuwat Limsuparhat <wasuwat.se@gmail.com>",
   "dependencies": {
