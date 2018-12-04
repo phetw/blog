@@ -2,6 +2,7 @@
 path: '/hello-world'
 title: 'Markdown sample'
 date: '2018-12-04'
+img: '../images/blog-one/1.jpg'
 ---
 
 ## An h2 header
