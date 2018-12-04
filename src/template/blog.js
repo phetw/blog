@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby'
 
 const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
   <section style={{ maxWidth: '800px', margin: '0 auto' }}>
-    {console.log(post.frontmatter.img)}
     <Helmet
       htmlAttributes={{ lang: 'th' }}
       title={`${post.frontmatter.title} | ${site.siteMetadata.title}`}
