@@ -23,12 +23,14 @@
     "typography-theme-grand-view": "^0.15.10"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.15.3"
   },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'"
   }
 }

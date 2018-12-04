@@ -8,20 +8,32 @@ export default function Home({ data }) {
     <main style={{ margin: '1rem auto', width: '100%', maxWidth: '700px' }}>
       <Helmet title="My blog" />
       <section style={{ width: '90%', margin: '0 auto' }}>
-        <h1>Hello</h1>
+        <h1>Blog</h1>
       </section>
-      {posts.filter(post => post.node.frontmatter.title.length > 0).map(({ node: post }) => (
-        <article style={{ width: '90%', margin: '0 auto' }} key={post.id}>
-          <h1>
-            <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-          </h1>
-          <p style={{ marginBottom: '1.2rem' }}>{post.excerpt}</p>
-          <p style={{ float: 'right', fontSize: '12px', color: 'hsla(0,0%,5%,0.5)', margin: '0 2.35rem' }}>{post.frontmatter.date}</p>
-        </article>
-      ))}
+      {posts
+        .filter(post => post.node.frontmatter.title.length > 0)
+        .map(({ node: post }) => (
+          <article style={{ width: '82.5%', margin: '0 auto' }} key={post.id}>
+            <h1>
+              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+            </h1>
+            <p style={{ marginBottom: '1.2rem' }}>{post.excerpt}</p>
+            <p
+              style={{
+                float: 'right',
+                fontSize: '12px',
+                color: 'hsla(0,0%,5%,0.5)',
+                margin: '0 2.35rem',
+              }}
+            >
+              {post.frontmatter.date}
+            </p>
+          </article>
+        ))}
     </main>
   )
 }
+
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {

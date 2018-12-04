@@ -11,7 +11,10 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         { name: 'author', content: site.siteMetadata.author },
         { name: 'description', content: post.excerpt },
         { name: 'og:title', content: post.frontmatter.title },
-        { name: 'og:image', content: post.frontmatter.img.childImageSharp.resize.src },
+        {
+          name: 'og:image',
+          content: post.frontmatter.img.childImageSharp.resize.src,
+        },
       ]}
     />
     <div style={{ margin: '1.25rem 1.75rem' }}>
@@ -19,14 +22,17 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         Back
       </Link>
       <h1 style={{ margin: '1.35rem 0' }}>{post.frontmatter.title}</h1>
-      <p style={{ opacity: '0.5', marginBottom: '1rem', fontSize: '75%' }}>{post.frontmatter.date}</p>
+      <p style={{ opacity: '0.5', marginBottom: '1rem', fontSize: '75%' }}>
+        {post.frontmatter.date}
+      </p>
       <hr />
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
       <a
         onClick={() => {
           window.scrollTo(0, 0)
-        }}>
+        }}
+      >
         To the top
       </a>
     </div>
