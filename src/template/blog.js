@@ -11,6 +11,7 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         { name: 'author', content: site.siteMetadata.author },
         { name: 'description', content: post.excerpt },
         { name: 'og:title', content: post.frontmatter.title },
+        { name: 'og:description', content: post.excerpt },
         {
           name: 'og:image',
           content: post.frontmatter.img.childImageSharp.resize.src,
@@ -51,6 +52,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt
       frontmatter {
         path
         title
