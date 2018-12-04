@@ -7,8 +7,8 @@ export default function Home({ data }) {
   return (
     <main style={{ margin: '1rem auto', width: '100%', maxWidth: '700px' }}>
       <Helmet title="My blog" />
-      <section style={{ width: '90%', margin: '0 auto' }}>
-        <h1>Blog</h1>
+      <section style={{ width: '82.5%', margin: '0 auto' }}>
+        <h3>wasuwat's thoughts</h3>
       </section>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
