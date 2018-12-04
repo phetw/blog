@@ -5,6 +5,7 @@ module.exports = {
     description: 'I write stuff about random things that I find interesting.',
     siteUrl: ''
   },
+  pathPrefix: '/blog',
   plugins: [
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
