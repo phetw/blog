@@ -6,7 +6,7 @@ export default function Home({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <main style={{ margin: '1rem auto', width: '100%', maxWidth: '700px' }}>
-      <Helmet title="My blog" />
+      <Helmet title="wasuwat's thoughts" />
       <section style={{ width: '82.5%', margin: '0 auto' }}>
         <h3>wasuwat's thoughts</h3>
       </section>
