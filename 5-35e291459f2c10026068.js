@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{141:function(o){o.exports={pages:[{componentChunkName:"component---src-pages-index-js",jsonName:"index",path:"/"},{componentChunkName:"component---src-template-blog-js",jsonName:"why-book-instead-of-ebooks-720",path:"/why-book-instead-of-ebooks"}],dataPaths:{index:"507/path---index-6a9-sLK9ddNJCXFS5b4SoUiAbpGz0","why-book-instead-of-ebooks-720":"308/path---why-book-instead-of-ebooks-720-575-2vbPia29SJRmbjx316VgHM9GNU"}}}}]);
-//# sourceMappingURL=5-35e291459f2c10026068.js.map
