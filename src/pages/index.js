@@ -1,6 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
+
+import profile from '../../static/main.jpg'
 import favicon from '../../static/favicon.png'
 
 export default function Home({ data }) {
@@ -10,7 +12,15 @@ export default function Home({ data }) {
       <Helmet
         htmlAttributes={{ lang: 'th' }}
         title="wasuwat's thoughts"
-        meta={[{ name: 'description', content: 'just my personal thoughts' }]}
+        meta={[
+          { name: 'description', content: 'nothing buy my personal thoughts' },
+          { name: 'og:title', content: "wasuwat's thoughts" },
+          {
+            name: 'og:image',
+            content:
+              'https://github.com/rappad/blog/blob/master/static/main.jpg',
+          },
+        ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
       <section style={{ width: '82.5%', margin: '0 auto' }}>
