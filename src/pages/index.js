@@ -1,12 +1,18 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
+import favicon from '../../static/favicon.ico'
 
 export default function Home({ data }) {
   const { edges: posts } = data.allMarkdownRemark
   return (
     <main style={{ margin: '1rem auto', width: '100%', maxWidth: '700px' }}>
-      <Helmet title="wasuwat's thoughts" />
+      <Helmet
+        htmlAttributes={{ lang: 'th' }}
+        title="wasuwat's thoughts"
+        meta={[{ name: 'description', content: 'just my personal thoughts' }]}
+        link={[{ rel: 'shortcut icon', type: 'image/ico', href: `${favicon}` }]}
+      />
       <section style={{ width: '82.5%', margin: '0 auto' }}>
         <h3>wasuwat's thoughts</h3>
       </section>
