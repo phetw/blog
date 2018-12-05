@@ -46,3 +46,5 @@ Gatsby นั้นนับว่าเป็น _static site generator_ ที
 แบบ **plug n play** ประมาณนั้น และที่สำคัญในเรื่องของ **performance** นั้นไม่เป็นรองใครแน่นอน
 
 ข้อเสียหลักๆก็คือ **ecosystem** ของ **Gatsby** นั้นค่อนข้างจำกัด เนื่องจากระบบที่เป็น plugin และที่สำคัญเลยก็คือต้องทำความเข้าใจ **graphql** ซักหน่อย ซึ่งผมคิดว่าสองเหตุผลนี้แหละที่ทำให้ **learning curve** ของมันสูงกว่า **Nextjs**
+
+Powered by Gatsby **[source code here](https://github.com/rappad/blog)**
