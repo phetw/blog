@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
-import profile from '../../static/main.jpg'
+import profile from '../../static/main.png'
 import favicon from '../../static/favicon.png'
 
 export default function Home({ data }) {
@@ -17,8 +17,7 @@ export default function Home({ data }) {
           { name: 'og:title', content: "wasuwat's thoughts" },
           {
             name: 'og:image',
-            content:
-              'https://github.com/rappad/blog/blob/master/static/main.jpg',
+            content: profile,
           },
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
