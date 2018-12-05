@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
-import profile from '../../static/main.png'
 import favicon from '../../static/favicon.png'
 
 export default function Home({ data }) {
@@ -13,11 +12,11 @@ export default function Home({ data }) {
         htmlAttributes={{ lang: 'th' }}
         title="wasuwat's thoughts"
         meta={[
-          { name: 'description', content: 'nothing buy my personal thoughts' },
+          { name: 'description', content: 'nothing but my personal thoughts' },
           { name: 'og:title', content: "wasuwat's thoughts" },
           {
             name: 'og:image',
-            content: profile,
+            content: 'http://oi65.tinypic.com/2w6xwnl.jpg',
           },
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
