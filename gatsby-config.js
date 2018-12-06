@@ -74,8 +74,9 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `wasuwat's thought`,
-        short_name: `wasuwat's thought`,
-        start_url: '/blog',
+        short_name: `readme`,
+        display: 'standalone',
+        start_url: './index.html',
         background_color: `#fff`,
         theme_color: `#d65947`,
         display: `minimal-ui`,
