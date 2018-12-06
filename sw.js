@@ -11,7 +11,8 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("workbox-v3.6.3/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "workbox-v3.6.3"});
 
 workbox.core.setCacheNameDetails({prefix: "wasuwat-blog"});
 
@@ -31,14 +32,14 @@ self.__precacheManifest = [
     "url": "app.08eb512c534233bffd38.css"
   },
   {
-    "url": "app-caf30fb6f6fe0c01f003.js"
+    "url": "app-cdc1404308a8c4c4d263.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-1995c373cd40df6147df.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b3ed89a2f4e6c5986816e3835286484a"
+    "revision": "9b2431396d013e84d3c1efc02a8ff846"
   },
   {
     "url": "component---src-pages-404-js-fe0652eacd7f102c9af7.js"
