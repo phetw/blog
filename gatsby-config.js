@@ -70,5 +70,17 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `wasuwat's thought`,
+        short_name: `wasuwat's thought`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#d65947`,
+        display: `minimal-ui`,
+        icon: `static/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
   ],
 }
