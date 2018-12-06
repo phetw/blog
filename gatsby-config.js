@@ -74,7 +74,7 @@ module.exports = {
       options: {
         name: `wasuwat's thought`,
         short_name: `readme`,
-        start_url: './index.html',
+        start_url: '/blog',
         background_color: `#fff`,
         theme_color: `#d65947`,
         display: `minimal-ui`,
