@@ -69,13 +69,11 @@ module.exports = {
         trackingId: 'UA-128174751-2',
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `wasuwat's thought`,
         short_name: `readme`,
-        display: 'standalone',
         start_url: './index.html',
         background_color: `#fff`,
         theme_color: `#d65947`,
@@ -83,5 +81,6 @@ module.exports = {
         icon: `static/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
   ],
 }
