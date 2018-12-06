@@ -75,7 +75,7 @@ module.exports = {
       options: {
         name: `wasuwat's thought`,
         short_name: `wasuwat's thought`,
-        start_url: `/`,
+        start_url: '/blog',
         background_color: `#fff`,
         theme_color: `#d65947`,
         display: `minimal-ui`,
