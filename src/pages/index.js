@@ -12,7 +12,7 @@ export default function Home({ data }) {
         htmlAttributes={{ lang: 'th' }}
         title="wasuwat's thoughts"
         meta={[
-          { name: 'description', content: 'nothing but my personal thoughts' },
+          { name: 'description', content: "wasuwat's personal blog" },
           { name: 'og:title', content: "wasuwat's thoughts" },
           {
             name: 'og:image',
