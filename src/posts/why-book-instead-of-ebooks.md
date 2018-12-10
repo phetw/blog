@@ -2,10 +2,10 @@
 path: '/why-book-instead-of-ebooks'
 title: 'สำหรับผมแล้ว หนังสือเป็นเล่มยังดีกว่า E-book เสมอ'
 date: '2018-12-04'
-img: '../images/why-book-instead-of-ebooks/1.jpg'
+thumbnail: '/img/why-book-instead-of-ebooks/1.jpg'
 ---
 
-![Image of books](../images/why-book-instead-of-ebooks/1.jpg)
+![Image of books](/img/why-book-instead-of-ebooks/1.jpg)
 
 ในยุคปัจจุบัน คงปฏิเสธไม่ได้เลยว่าการที่มี **internet** เข้ามานั้นทำให้ทุกอย่างง่าย และรวดเร็วขึ้น ในขณะที่หลายๆคนพอใจที่จะกดซื้อผ่าน **amazon.com** ได้ทันที และเก็บไว้ใน **iPad** หยิบขึ้นมาอ่านเมื่อไหร่ก็ได้ นอกจากจะสะดวกสะบาย แถมไม่ต้องรถติด หรือเบียดคนออกไปที่ร้านหนังสือ ต่อคิวจ่ายเงิน
 
