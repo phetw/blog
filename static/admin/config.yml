@@ -4,7 +4,8 @@ backend:
   accept_roles: #optional - accepts all users if left out
     - admin
 
-media_folder: static/images
+media_folder: static/img
+public_folder: /img
 
 collections:
   - name: 'blog' # Used in routes, e.g., /admin/collections/blog
