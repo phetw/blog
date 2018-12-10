@@ -11,7 +11,13 @@ module.exports = {
   plugins: [
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        useMozJpeg: true,
+        stripMetadata: true,
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-typography`,
@@ -89,5 +95,12 @@ module.exports = {
         cacheId: `wasuwat-blog`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/netlify.js`,
+      },
+    },
+    'gatsby-plugin-netlify',
   ],
 }
