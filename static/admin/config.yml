@@ -4,7 +4,7 @@ backend:
   accept_roles: #optional - accepts all users if left out
     - admin
 
-media_folder: static/images
+media_folder: src/images
 
 collections:
   - name: 'blog' # Used in routes, e.g., /admin/collections/blog
@@ -17,4 +17,4 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Image', name: 'thumbnail', widget: 'image' }
