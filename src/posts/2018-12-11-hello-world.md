@@ -2,11 +2,11 @@
 path: /test
 title: Hello world
 date: 2018-12-10T17:24:03.256Z
-thumbnail: /img/me.jpg
+thumbnail: ../../static/images/me.jpg
 ---
 
 # **test netlify cms**
 
-![test](/img/me.jpg)
+![test](../../static/images/me.jpg)
 
 lorem ipsum
