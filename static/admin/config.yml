@@ -5,7 +5,6 @@ backend:
     - admin
 
 media_folder: static/images
-public_folder: /images
 
 collections:
   - name: 'blog' # Used in routes, e.g., /admin/collections/blog
