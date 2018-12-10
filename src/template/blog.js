@@ -55,7 +55,7 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         img {
           childImageSharp {
-            resize(width: 300, height: 300) {
+            resize(width: 630) {
               src
             }
           }
