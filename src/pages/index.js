@@ -3,12 +3,15 @@ import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import favicon from '../../static/favicon.png'
 
-export default function Home({ data: { site, allMarkdownRemark } }) {
+export default function Home({
+  data: { site, allImageSharp, allMarkdownRemark },
+}) {
   const { title, author, description } = site.siteMetadata
+  const ogImage = allImageSharp.edges[0]
   const { edges: posts } = allMarkdownRemark
 
   return (
-    <main style={{ margin: '1rem auto', width: '100%', maxWidth: '700px' }}>
+    <main style={{ margin: '1rem auto', width: '100%', maxWidth: '800px' }}>
       <Helmet
         htmlAttributes={{ lang: 'th' }}
         title={title}
@@ -17,6 +20,10 @@ export default function Home({ data: { site, allMarkdownRemark } }) {
           { name: 'description', content: description },
           { name: 'og:title', content: title },
           { name: 'og:description', content: description },
+          {
+            name: 'og:image',
+            content: ogImage.node.resize.src,
+          },
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
@@ -65,6 +72,16 @@ export const pageQuery = graphql`
             path
             title
             date(formatString: "DD MMMM, YYYY")
+          }
+        }
+      }
+    }
+    allImageSharp(filter: { resize: { originalName: { eq: "me.jpg" } } }) {
+      edges {
+        node {
+          id
+          resize {
+            src
           }
         }
       }
