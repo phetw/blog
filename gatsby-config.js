@@ -45,10 +45,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 600,
+              maxWidth: 800,
               withWebp: true,
               wrapperStyle:
-                'margin-left:0!important;margin-right:0!important;max-width:600px;',
+                'margin-left:0!important;margin-right:0!important;max-width:800px;',
               linkImagesToOriginal: false,
             },
           },
