@@ -20,7 +20,7 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         },
         {
           name: 'og:image',
-          content: post.frontmatter.img.childImageSharp.resize.src,
+          content: post.frontmatter.img,
         },
       ]}
     />
@@ -60,13 +60,7 @@ export const pageQuery = graphql`
         path
         title
         date(formatString: "DD MMMM, YYYY")
-        img {
-          childImageSharp {
-            resize(width: 300) {
-              src
-            }
-          }
-        }
+        img
       }
     }
   }
