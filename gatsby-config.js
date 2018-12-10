@@ -95,12 +95,7 @@ module.exports = {
         cacheId: `wasuwat-blog`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/netlify.js`,
-      },
-    },
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
   ],
 }
