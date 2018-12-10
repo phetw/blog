@@ -22,7 +22,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-    steps:
       - add_ssh_keys:
           fingerprints:
             - '7a:56:8e:04:2e:33:82:78:f5:54:09:2e:5f:0f:69:6e'
