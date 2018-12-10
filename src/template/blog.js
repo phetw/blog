@@ -29,13 +29,9 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
       <hr />
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <a
-        onClick={() => {
-          window.scrollTo(0, 0)
-        }}
-      >
-        To the top
-      </a>
+      <Link style={{ fontSize: '1rem' }} to="/">
+        Back
+      </Link>
     </div>
   </section>
 )
@@ -59,11 +55,8 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         img {
           childImageSharp {
-            resize(width: 200, height: 200) {
+            resize(width: 300, height: 300) {
               src
-            }
-            fluid(maxWidth: 450) {
-              ...GatsbyImageSharpFluid
             }
           }
         }
