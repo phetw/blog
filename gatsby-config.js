@@ -4,11 +4,18 @@ module.exports = {
     author: `Wasuwat Limsuparhat`,
     description:
       "Wasuwat Limsuparhat's personal blog, learn more about me at https://rappad.github.io/wasuwat-limsuparhat",
-    image: '/static/main.jpg',
     siteUrl: 'https://rappad.github.io/blog/',
   },
   pathPrefix: '/blog',
   plugins: [
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'images',
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
@@ -43,6 +50,12 @@ module.exports = {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-js',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
             },
           },
         ],
