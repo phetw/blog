@@ -25,10 +25,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 450,
+              maxWidth: 1200,
               withWebp: true,
               wrapperStyle:
-                'margin-left:0!important;margin-right:0!important;max-width:400px;',
+                'margin-left:0!important;margin-right:0!important;max-width:600px;',
               linkImagesToOriginal: false,
             },
           },
@@ -73,14 +73,20 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `wasuwat's thought`,
-        short_name: `readme`,
-        start_url: '/blog',
+        short_name: `W`,
+        start_url: '.',
+        display: 'standalone',
         background_color: `#fff`,
         theme_color: `#d65947`,
         display: `minimal-ui`,
         icon: `static/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        cacheId: `wasuwat-blog`,
+      },
+    },
   ],
 }
