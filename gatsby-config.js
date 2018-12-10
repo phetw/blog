@@ -13,7 +13,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
-        name: 'images',
+        name: 'uploads',
       },
     },
     'gatsby-plugin-catch-links',
@@ -36,6 +36,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads',
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
