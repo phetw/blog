@@ -9,7 +9,9 @@ img: '../images/gatsby-first-time/1.jpeg'
 
 ## Gatsby : Modern web tech without the headache
 
-Gatsby นั้นนับว่าเป็น static site generator ที่มีความน่าสนใจมาก โดยที่ผ่านมานั้นผมเคยได้ลองเจ้า Next.js และชื่นชอบหลายๆอย่างของมันมาก โดย Next.js นั้นผมรู้สึกว่า หากเคยใช้ React.js มาก่อนแล้ว learning curve ค่อนข้างต่ำ และ document ก็ค่อนข้างพร้อม แถมมี examples ที่ยกตัวอย่าง integration กับ third-party library อยู่เยอะมากๆ
+Gatsby นั้นนับว่าเป็น static site generator ที่มีความน่าสนใจมาก โดยที่ผ่านมานั้นผมเคยมีโอกาสได้ลองใช้ Next.js และชื่นชอบหลายๆอย่างของมันมาก โดยส่วนตัวแล้วผมรู้สึกว่าหากเคยใช้ react มาก่อนแล้ว learning curve ค่อนข้างต่ำเพราะเราแทบไม่ต้องเรียนรู้อะไรเพิ่มเลย และ document ก็ค่อนข้างเยอะและอธิบายไว้อย่างละเอียด แถมมี examples ที่ยกตัวอย่าง integration กับ third-party library อยู่เยอะมากๆ และที่สำคัญ community ก็ค่อนข้างใหญ่
+
+แต่ในขณะเดียวกัน ช่วงหลังมานี้ผมเพิ่งค้นพบว่าหลายๆเว็บนั้นใช้ Gatsby ในการทำ และผมก็บังเอิญได้ไปอ่านบทความเกี่ยวกับ JAM stack เข้าและเข้าใจว่า Gatsby นั้นเป็น tool ที่เหมาะสมมากสำหรับการ implement web ที่เป็น JAM stack เลยรู้สึกว่า Gatsby เนี่ย เป็นอีกอย่างนึงที่ react web developer ไม่ควรพลาด
 
 ### ทำไมถึงต้องเป็น Gatsby ?
 
