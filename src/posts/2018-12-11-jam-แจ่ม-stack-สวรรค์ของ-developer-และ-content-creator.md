@@ -1,0 +1,7 @@
+---
+path: /introduction-to-jam-stack
+title: JAM (แจ่ม) stack - สวรรค์ของ developer และ content creator
+date: 2018-12-10T20:08:53.312Z
+thumbnail: /img/21aaf3a8-ff90-4a43-83e0-15c33e5875e7.png
+---
+![Jam stack](/img/21aaf3a8-ff90-4a43-83e0-15c33e5875e7.png)
