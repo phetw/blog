@@ -6,12 +6,18 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
   <section style={{ maxWidth: '800px', margin: '0 auto' }}>
     <Helmet
       htmlAttributes={{ lang: 'th' }}
-      title={`${post.frontmatter.title} | ${site.siteMetadata.title}`}
+      title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
       meta={[
         { name: 'author', content: site.siteMetadata.author },
-        { name: 'description', content: post.excerpt },
+        {
+          name: 'description',
+          content: `${post.excerpt} on ${site.siteMetadata.description}`,
+        },
         { name: 'og:title', content: post.frontmatter.title },
-        { name: 'og:description', content: post.excerpt },
+        {
+          name: 'og:description',
+          content: `${post.excerpt} on ${site.siteMetadata.description}`,
+        },
         {
           name: 'og:image',
           content: post.frontmatter.img.childImageSharp.resize.src,
@@ -43,6 +49,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
         author
       }
     }

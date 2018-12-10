@@ -1,21 +1,25 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
-
 import favicon from '../../static/favicon.png'
 
-export default function Home({ data }) {
-  const { edges: posts } = data.allMarkdownRemark
-  const [blogMainImage] = data.allImageSharp.edges
+export default function Home({
+  data: { site, allImageSharp, allMarkdownRemark },
+}) {
+  const { title, author, description } = site.siteMetadata
+  const { edges: posts } = allMarkdownRemark
+  const [blogMainImage] = allImageSharp.edges
 
   return (
     <main style={{ margin: '1rem auto', width: '100%', maxWidth: '700px' }}>
       <Helmet
         htmlAttributes={{ lang: 'th' }}
-        title="wasuwat's thoughts"
+        title={title}
         meta={[
-          { name: 'description', content: "wasuwat's personal blog" },
-          { name: 'og:title', content: "wasuwat's thoughts" },
+          { name: 'author', content: author },
+          { name: 'description', content: description },
+          { name: 'og:title', content: title },
+          { name: 'og:description', content: description },
           {
             name: 'og:image',
             content: blogMainImage.node.resize.src,
@@ -24,7 +28,7 @@ export default function Home({ data }) {
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
       <section style={{ width: '82.5%', margin: '0 auto' }}>
-        <h3>wasuwat's thoughts</h3>
+        <h3>{title}</h3>
       </section>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
@@ -52,6 +56,13 @@ export default function Home({ data }) {
 
 export const pageQuery = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        title
+        description
+        author
+      }
+    }
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
