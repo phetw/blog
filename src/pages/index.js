@@ -6,6 +6,8 @@ import favicon from '../../static/favicon.png'
 
 export default function Home({ data }) {
   const { edges: posts } = data.allMarkdownRemark
+  const [blogMainImage] = data.allImageSharp.edges
+
   return (
     <main style={{ margin: '1rem auto', width: '100%', maxWidth: '700px' }}>
       <Helmet
@@ -16,7 +18,7 @@ export default function Home({ data }) {
           { name: 'og:title', content: "wasuwat's thoughts" },
           {
             name: 'og:image',
-            content: 'http://oi65.tinypic.com/2w6xwnl.jpg',
+            content: blogMainImage.node.resize.src,
           },
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
@@ -59,6 +61,16 @@ export const pageQuery = graphql`
             path
             title
             date(formatString: "DD MMMM, YYYY")
+          }
+        }
+      }
+    }
+    allImageSharp(filter: { resize: { originalName: { eq: "me.jpg" } } }) {
+      edges {
+        node {
+          id
+          resize {
+            src
           }
         }
       }
