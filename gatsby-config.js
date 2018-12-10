@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `wasuwat's thoughts`,
     author: `Wasuwat Limsuparhat`,
-    description: '',
+    description:
+      "Wasuwat Limsuparhat's personal blog, learn more about me at https://rappad.github.io/wasuwat-limsuparhat",
     image: '/static/main.jpg',
     siteUrl: 'https://rappad.github.io/blog/',
   },
