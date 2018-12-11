@@ -1,6 +1,6 @@
 ---
-path: /simple-event-loop
-title: Event loop ฉบับเข้าใจง่าย
+path: /simple-javascript-event-loop
+title: Javascript Event loop ฉบับเข้าใจง่าย
 date: 2018-12-11T11:58:13.534Z
 thumbnail: /img/photo-1516083392324-1030b7529f0c.jpeg
 ---
