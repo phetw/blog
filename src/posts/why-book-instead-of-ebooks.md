@@ -1,6 +1,6 @@
 ---
 path: /why-book-instead-of-ebooks
-title: สำหรับผมแล้ว หนังสือเป็นเล่มยังดีกว่า E-book เสมอ
+title: หนังสือเป็นเล่มยังดีกว่า E-book เสมอ
 date: '2018-12-04'
 thumbnail: /img/books.jpg
 ---
