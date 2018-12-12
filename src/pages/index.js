@@ -11,7 +11,14 @@ export default function Home({
   const { edges: posts } = allMarkdownRemark
 
   return (
-    <main style={{ margin: '1rem auto', width: '100%', maxWidth: '800px' }}>
+    <main
+      style={{
+        margin: '1rem auto',
+        paddingBottom: '3.5rem',
+        width: '100%',
+        maxWidth: '800px',
+      }}
+    >
       <Helmet
         htmlAttributes={{ lang: 'th' }}
         title={title}
@@ -27,17 +34,19 @@ export default function Home({
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
-      <section style={{ width: '82.5%', margin: '0 auto' }}>
+      <section style={{ width: '80%', margin: '0 auto' }}>
         <h3>{title}</h3>
       </section>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => (
-          <article style={{ width: '82.5%', margin: '0 auto' }} key={post.id}>
+          <article style={{ width: '80%', margin: '0 auto' }} key={post.id}>
             <h1>
               <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
             </h1>
-            <p style={{ marginBottom: '1.2rem' }}>{post.excerpt}</p>
+            <p style={{ marginBottom: '1.2rem', color: 'hsla(0,0%,5%,0.7)' }}>
+              {post.frontmatter.description} - <span>{post.excerpt}</span>
+            </p>
             <p
               style={{
                 float: 'right',
@@ -66,11 +75,12 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 300)
           id
+          excerpt(format: PLAIN)
           frontmatter {
             path
             title
+            description
             date(formatString: "DD MMMM, YYYY")
           }
         }
@@ -80,7 +90,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          resize {
+          resize(quality: 40, width: 600, height: 315, toFormat: JPG) {
             src
           }
         }
