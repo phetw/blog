@@ -11,22 +11,24 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         { name: 'author', content: site.siteMetadata.author },
         {
           name: 'description',
-          content: `${post.excerpt}`,
+          content: `${post.frontmatter.description} | ${post.excerpt} | ${
+            site.siteMetadata.description
+          }`,
         },
         { name: 'og:title', content: post.frontmatter.title },
         {
           name: 'og:description',
-          content: `${post.excerpt}`,
+          content: `${post.frontmatter.description}`,
         },
         {
           name: 'og:image',
-          content: post.frontmatter.thumbnail.childImageSharp.fluid.src,
+          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
         },
       ]}
     />
     <div style={{ margin: '1.25rem 1.75rem' }}>
       <Link style={{ fontSize: '1rem' }} to="/">
-        Back
+        Home
       </Link>
       <h1 style={{ margin: '1.35rem 0' }}>{post.frontmatter.title}</h1>
       <p style={{ opacity: '0.5', marginBottom: '1rem', fontSize: '75%' }}>
@@ -35,9 +37,6 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
       <hr />
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <Link style={{ fontSize: '1rem' }} to="/">
-        Back
-      </Link>
     </div>
   </section>
 )
@@ -55,14 +54,15 @@ export const pageQuery = graphql`
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-      excerpt
+      excerpt(format: PLAIN)
       frontmatter {
         path
         title
+        description
         date(formatString: "DD MMMM, YYYY")
         thumbnail {
           childImageSharp {
-            fluid {
+            resize(width: 800, height: 420, cropFocus: CENTER, toFormat: JPG) {
               src
             }
           }
