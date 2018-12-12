@@ -20,7 +20,7 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         },
         {
           name: 'og:image',
-          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
+          content: post.frontmatter.thumbnail.childImageSharp.fluid.src,
         },
       ]}
     />
