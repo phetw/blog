@@ -34,13 +34,13 @@ export default function Home({
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
-      <section style={{ width: '80%', margin: '0 auto' }}>
+      <section style={{ width: '72%', margin: '0 auto' }}>
         <h3>{title}</h3>
       </section>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => (
-          <article style={{ width: '80%', margin: '0 auto' }} key={post.id}>
+          <article style={{ width: '72%', margin: '0 auto' }} key={post.id}>
             <h1>
               <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
             </h1>
