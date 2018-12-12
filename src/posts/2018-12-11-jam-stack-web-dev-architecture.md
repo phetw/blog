@@ -3,7 +3,6 @@ path: /introduction-to-jam-stack
 title: JAM stack architecture
 description: JAM stack คืออะไร และดีกว่ายังไง
 date: 2018-12-10T20:08:53.312Z
-thumbnail: /img/21aaf3a8-ff90-4a43-83e0-15c33e5875e7.png
+thumbnail: /img/jam.jpg
 ---
-
-![Jam stack](/img/21aaf3a8-ff90-4a43-83e0-15c33e5875e7.png)
+![Jam stack](/img/jam.jpg)
