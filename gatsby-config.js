@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `wasuwat's thoughts`,
     author: `Wasuwat Limsuparhat`,
-    description:
-      "Wasuwat Limsuparhat's personal blog, learn more about me at https://rappad.github.io/wasuwat-limsuparhat",
+    description: 'only when I get bored of writing code.',
     siteUrl: 'https://rappad.github.io/blog/',
   },
   pathPrefix: '/blog',
