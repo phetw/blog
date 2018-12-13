@@ -105,6 +105,7 @@ module.exports = {
         cacheId: `wasuwat-blog`,
       },
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
