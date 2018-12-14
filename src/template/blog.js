@@ -73,7 +73,7 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
           href={`https://facebook.com/sharer.php?u=${
             site.siteMetadata.siteUrl
           }${post.frontmatter.path}`}
-          rel="nofollow"
+          rel="noopener noreferrer"
           target="_blank"
           title="Share on Facebook"
         >
