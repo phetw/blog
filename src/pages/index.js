@@ -1,7 +1,38 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
+
 import favicon from '../../static/favicon.png'
+
+const BlogListContainer = styled.main`
+  margin: 1rem auto;
+  padding-bottom: 3.5rem;
+  width: 100%;
+  max-width: 800px;
+`
+
+const BlogTitleContainer = styled.section`
+  width: 72%;
+  margin: 0 auto;
+`
+
+const BlogItem = styled(BlogTitleContainer)``
+
+const BlogItemTitle = styled.h1``
+
+const BlogItemContentPreview = styled.p`
+  color: #505050;
+  max-width: 100%;
+  margin-bottom: 1.2rem;
+`
+
+const BlogItemPublishDate = styled.p`
+  float: right;
+  font-size: 12px;
+  color: #c3c3c3;
+  margin: 0 2.35rem;
+`
 
 export default function Home({
   data: { site, allImageSharp, allMarkdownRemark },
@@ -11,14 +42,7 @@ export default function Home({
   const { edges: posts } = allMarkdownRemark
 
   return (
-    <main
-      style={{
-        margin: '1rem auto',
-        paddingBottom: '3.5rem',
-        width: '100%',
-        maxWidth: '800px',
-      }}
-    >
+    <BlogListContainer>
       <Helmet
         htmlAttributes={{ lang: 'th' }}
         title={title}
@@ -34,32 +58,23 @@ export default function Home({
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
-      <section style={{ width: '72%', margin: '0 auto' }}>
+      <BlogTitleContainer>
         <h3>{title}</h3>
-      </section>
+      </BlogTitleContainer>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
         .map(({ node: post }) => (
-          <article style={{ width: '72%', margin: '0 auto' }} key={post.id}>
-            <h1>
+          <BlogItem key={post.id}>
+            <BlogItemTitle>
               <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-            </h1>
-            <p style={{ marginBottom: '1.2rem', color: 'hsla(0,0%,5%,0.7)' }}>
+            </BlogItemTitle>
+            <BlogItemContentPreview>
               {post.frontmatter.description} - <span>{post.excerpt}</span>
-            </p>
-            <p
-              style={{
-                float: 'right',
-                fontSize: '12px',
-                color: 'hsla(0,0%,5%,0.5)',
-                margin: '0 2.35rem',
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-          </article>
+            </BlogItemContentPreview>
+            <BlogItemPublishDate>{post.frontmatter.date}</BlogItemPublishDate>
+          </BlogItem>
         ))}
-    </main>
+    </BlogListContainer>
   )
 }
 
