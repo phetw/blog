@@ -3,6 +3,8 @@ import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
+import WhoAMI from '../components/WhoAmI'
+
 import favicon from '../../static/favicon.png'
 
 const BlogListContainer = styled.main`
@@ -59,7 +61,7 @@ export default function Home({
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
       <BlogTitleContainer>
-        <h3>{title}</h3>
+        <WhoAMI />
       </BlogTitleContainer>
       {posts
         .filter(post => post.node.frontmatter.title.length > 0)
