@@ -43,12 +43,14 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
           name: 'description',
           content: `${post.frontmatter.description} | ${post.excerpt} | ${
             site.siteMetadata.description
-          }`,
+          } By ${site.siteMetadata.author}`,
         },
         { name: 'og:title', content: post.frontmatter.title },
         {
           name: 'og:description',
-          content: `${post.frontmatter.description}`,
+          content: `${post.frontmatter.description} By ${
+            site.siteMetadata.author
+          }`,
         },
         {
           name: 'og:image',
