@@ -50,7 +50,7 @@ export default function Home({
         title={title}
         meta={[
           { name: 'author', content: author },
-          { name: 'description', content: description },
+          { name: 'description', content: description + ' By ' + author },
           { name: 'og:title', content: title },
           { name: 'og:description', content: description },
           {
