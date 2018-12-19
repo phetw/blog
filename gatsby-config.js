@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `wasuwat's thoughts`,
+    title: `wasuwat's journal`,
     author: `Wasuwat Limsuparhat`,
-    description: 'only when I get bored of writing code.',
+    description: 'I write to remind and keep track on what I\'ve learn.',
     siteUrl: 'https://rappad.github.io/blog/',
   },
   pathPrefix: '/blog',
