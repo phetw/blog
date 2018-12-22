@@ -51,9 +51,17 @@ export default function Home({
         title={title}
         meta={[
           { name: 'author', content: author },
-          { name: 'description', content: description + ' By ' + author },
+          {
+            name: 'description',
+            content:
+              description + ' by ' + author + ' - ' + post.frontmatter.date,
+          },
           { name: 'og:title', content: title },
-          { name: 'og:description', content: description },
+          {
+            name: 'og:description',
+            content:
+              description + ' by ' + author + ' - ' + post.frontmatter.date,
+          },
           {
             name: 'og:image',
             content: ogImage.node.resize.src,
