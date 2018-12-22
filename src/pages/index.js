@@ -24,7 +24,8 @@ const BlogItem = styled(BlogTitleContainer)``
 const BlogItemTitle = styled.h1``
 
 const BlogItemContentPreview = styled.p`
-  color: #505050;
+  color: #616161;
+  font-size: 90%;
   max-width: 100%;
   margin-bottom: 1.2rem;
 `
@@ -71,7 +72,7 @@ export default function Home({
               <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
             </BlogItemTitle>
             <BlogItemContentPreview>
-              {post.frontmatter.description} - <span>{post.excerpt}</span>
+              {post.frontmatter.description}
             </BlogItemContentPreview>
             <BlogItemPublishDate>{post.frontmatter.date}</BlogItemPublishDate>
           </BlogItem>
