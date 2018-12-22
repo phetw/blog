@@ -53,8 +53,7 @@ export default function Home({
           { name: 'author', content: author },
           {
             name: 'description',
-            content:
-              description + ' by ' + author + ' - ' + post.frontmatter.date,
+            content: description + ' by ' + author,
           },
           { name: 'og:title', content: title },
           {
