@@ -59,8 +59,7 @@ export default function Home({
           { name: 'og:title', content: title },
           {
             name: 'og:description',
-            content:
-              description + ' by ' + author + ' - ' + post.frontmatter.date,
+            content: description + ' by ' + author,
           },
           {
             name: 'og:image',
