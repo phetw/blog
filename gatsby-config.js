@@ -89,7 +89,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `wasuwat's thought`,
+        name: `wasuwat s journal`,
         short_name: `W`,
         start_url: '.',
         display: 'standalone',
