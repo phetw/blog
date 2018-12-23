@@ -15,18 +15,30 @@ const BlogListContainer = styled.main`
 `
 
 const BlogTitleContainer = styled.section`
-  width: 72%;
   margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    width: 72%;
+  }
+  @media screen and (max-width: 767px) {
+    width: 82%;
+  }
 `
 
 const BlogItem = styled(BlogTitleContainer)``
 
-const BlogItemTitle = styled.h1``
+const BlogItemTitle = styled.h1`
+  @media screen and (min-width: 768px) {
+    font-size: 1.75rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+  }
+`
 
 const BlogItemContentPreview = styled.p`
   color: #616161;
   font-size: 90%;
-  max-width: 100%;
+  max-width: 92%;
   margin-bottom: 1.2rem;
 `
 
