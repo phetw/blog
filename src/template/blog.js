@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 
+import ShareToSocial from '../components/ShareToSocial'
+
 const Navbar = styled.nav`
   display: flex;
   flex-direction: row;
@@ -25,11 +27,6 @@ const PublishDate = styled.p`
   color: #c3c3c3;
   margin-bottom: 1rem;
   font-size: 75%;
-`
-
-const ShareToSocial = styled.section`
-  float: right;
-  margin-bottom: 2rem;
 `
 
 const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
@@ -81,19 +78,11 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
       <hr />
       <section dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <ShareToSocial>
-        Share to :{' '}
-        <a
-          href={`https://facebook.com/sharer.php?u=${
-            site.siteMetadata.siteUrl
-          }${post.frontmatter.path}`}
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Share on Facebook"
-        >
-          Facebook
-        </a>
-      </ShareToSocial>
+      <ShareToSocial
+        title={post.frontmatter.title}
+        path={post.frontmatter.path}
+        siteUrl={site.siteMetadata.siteUrl}
+      />
     </ContentWrapper>
   </BlogContainer>
 )
