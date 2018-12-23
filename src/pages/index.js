@@ -53,15 +53,27 @@ export default function Home({
           { name: 'author', content: author },
           {
             name: 'description',
-            content: description + ' by ' + author,
+            content: description + ' written by ' + author,
           },
           { name: 'og:title', content: title },
           {
             name: 'og:description',
-            content: description + ' by ' + author,
+            content: description + ' written by ' + author,
           },
           {
             name: 'og:image',
+            content: ogImage.node.resize.src,
+          },
+          {
+            name: 'twitter:title',
+            content: title,
+          },
+          {
+            name: 'twitter:description',
+            content: description,
+          },
+          {
+            name: 'twitter:image',
             content: ogImage.node.resize.src,
           },
         ]}

@@ -43,17 +43,29 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
           name: 'description',
           content: `${post.frontmatter.description} | ${post.excerpt} | ${
             site.siteMetadata.description
-          } By ${site.siteMetadata.author}`,
+          } written by ${site.siteMetadata.author}`,
         },
         { name: 'og:title', content: post.frontmatter.title },
         {
           name: 'og:description',
-          content: `${post.frontmatter.description} By ${
+          content: `${post.frontmatter.description} written by ${
             site.siteMetadata.author
           }`,
         },
         {
           name: 'og:image',
+          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
+        },
+        {
+          name: 'twitter:title',
+          content: post.frontmatter.title,
+        },
+        {
+          name: 'twitter:description',
+          content: post.frontmatter.description,
+        },
+        {
+          name: 'twitter:image',
           content: post.frontmatter.thumbnail.childImageSharp.resize.src,
         },
       ]}
