@@ -41,8 +41,8 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         { name: 'author', content: site.siteMetadata.author },
         {
           name: 'description',
-          content: `${post.frontmatter.description} | ${post.excerpt} | ${
-            site.siteMetadata.description
+          content: `${post.frontmatter.description} | ${
+            post.excerpt
           } written by ${site.siteMetadata.author}`,
         },
         { name: 'og:title', content: post.frontmatter.title },
