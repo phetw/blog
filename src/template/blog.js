@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 
 import ShareToSocial from '../components/ShareToSocial'
 
 const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
-  <main style={{ maxWidth: '800px', margin: '0 auto' }}>
+  <Fragment>
     <Helmet
       htmlAttributes={{ lang: 'th' }}
       title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
@@ -42,32 +42,34 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         },
       ]}
     />
-    <section style={{ margin: '1.25rem 1.75rem' }}>
-      <nav style={{ display: 'flex', flexDirection: 'row' }}>
-        <Link style={{ fontSize: '1rem' }} to="/">
-          Home
-        </Link>
-      </nav>
-      <h1 style={{ margin: '1.35rem 0' }}>{post.frontmatter.title}</h1>
-      <p
-        style={{
-          color: '#c3c3c3',
-          marginBottom: '1rem',
-          fontSize: '75%',
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
-      <hr />
-      <section dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
-      <ShareToSocial
-        title={post.frontmatter.title}
-        path={post.frontmatter.path}
-        siteUrl={site.siteMetadata.siteUrl}
-      />
-    </section>
-  </main>
+    <main style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <section style={{ margin: '1.25rem 1.75rem' }}>
+        <nav style={{ display: 'flex', flexDirection: 'row' }}>
+          <Link style={{ fontSize: '1rem' }} to="/">
+            Home
+          </Link>
+        </nav>
+        <h1 style={{ margin: '1.35rem 0' }}>{post.frontmatter.title}</h1>
+        <p
+          style={{
+            color: '#c3c3c3',
+            marginBottom: '1rem',
+            fontSize: '75%',
+          }}
+        >
+          {post.frontmatter.date}
+        </p>
+        <hr />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr />
+        <ShareToSocial
+          title={post.frontmatter.title}
+          path={post.frontmatter.path}
+          siteUrl={site.siteMetadata.siteUrl}
+        />
+      </section>
+    </main>
+  </Fragment>
 )
 
 export default BlogTemplate

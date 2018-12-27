@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
@@ -16,7 +16,7 @@ export default function Home({
   const { edges: posts } = allMarkdownRemark
 
   return (
-    <main className="wrapper">
+    <Fragment>
       <Helmet
         htmlAttributes={{ lang: 'th' }}
         title={title}
@@ -50,21 +50,23 @@ export default function Home({
         ]}
         link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
       />
-      <section className="blog-container">
-        <WhoAMI />
-      </section>
-      {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => (
-          <section className="blog-container" key={post.id}>
-            <h1 className="blog-title">
-              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-            </h1>
-            <p className="blog-content">{post.frontmatter.description}</p>
-            <p className="blog-date">{post.frontmatter.date}</p>
-          </section>
-        ))}
-    </main>
+      <main className="wrapper">
+        <section className="blog-container">
+          <WhoAMI />
+        </section>
+        {posts
+          .filter(post => post.node.frontmatter.title.length > 0)
+          .map(({ node: post }) => (
+            <section className="blog-container" key={post.id}>
+              <h1 className="blog-title">
+                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+              </h1>
+              <p className="blog-content">{post.frontmatter.description}</p>
+              <p className="blog-date">{post.frontmatter.date}</p>
+            </section>
+          ))}
+      </main>
+    </Fragment>
   )
 }
 
