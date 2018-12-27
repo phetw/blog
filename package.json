@@ -5,7 +5,7 @@
   "author": "Wasuwat Limsuparhat <wasuwat.se@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.9.4",
-    "gatsby": "^2.0.60",
+    "gatsby": "^2.0.76",
     "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-manifest": "^2.0.12",
@@ -42,8 +42,9 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
+    "rm-cache": "rm -rf public && rm -rf .cache",
     "build-prefix": "gatsby build --prefix-paths",
-    "deploy": "yarn format && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'",
+    "deploy": "yarn rm-cache && yarn format && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'"
   }
 }
