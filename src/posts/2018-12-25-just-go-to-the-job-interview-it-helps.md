@@ -5,6 +5,7 @@ description: 'A few good reasons to go for a job interview every once in a while
 date: 2018-12-25T02:58:11.637Z
 thumbnail: /img/nik-macmillan-280300-unsplash.jpg
 ---
+
 ![Interviewing](/img/nik-macmillan-280300-unsplash.jpg)
 
 ## You get to test your abilities.
@@ -18,7 +19,5 @@ In most of the interview, either the interviewer will tell you about themselves 
 ## You get out of your comfort zone
 
 When working at a company for a certain amount of time, you adapt and make yourself comfortable like you're at home. That is all good, but a coin always has two sides. You fall into the comfort zone. In some cases, some tends to stay at a company even they know that they are under-paid. When you explore and go for interview, you will know that better opportunities await you. Especially in Thailand, where most of the company does not value software developers and therefore, the pay role does not go along with the growth of technology. Sometimes, it is better to move on to the other company, and this is the reasons why turn over rate of many tech company is so high and job as a tech recruiter is spreading like a virus.
-
-
 
 However, these are all my personal opinion. I am just a young, stupid and inexperience bloke trying to learn the life. Feel free to criticize or comment.
