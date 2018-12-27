@@ -1,36 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 
 import ShareToSocial from '../components/ShareToSocial'
 
-const Navbar = styled.nav`
-  display: flex;
-  flex-direction: row;
-`
-
-const BlogContainer = styled.main`
-  max-width: 800px;
-  margin: 0 auto;
-`
-
-const ContentWrapper = styled.section`
-  margin: 1.25rem 1.75rem;
-`
-
-const Title = styled.h1`
-  margin: 1.35rem 0;
-`
-
-const PublishDate = styled.p`
-  color: #c3c3c3;
-  margin-bottom: 1rem;
-  font-size: 75%;
-`
-
 const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
-  <BlogContainer>
+  <main style={{ maxWidth: '800px', margin: '0 auto' }}>
     <Helmet
       htmlAttributes={{ lang: 'th' }}
       title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
@@ -67,14 +42,22 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         },
       ]}
     />
-    <ContentWrapper>
-      <Navbar>
+    <section style={{ margin: '1.25rem 1.75rem' }}>
+      <nav style={{ display: 'flex', flexDirection: 'row' }}>
         <Link style={{ fontSize: '1rem' }} to="/">
           Home
         </Link>
-      </Navbar>
-      <Title>{post.frontmatter.title}</Title>
-      <PublishDate>{post.frontmatter.date}</PublishDate>
+      </nav>
+      <h1 style={{ margin: '1.35rem 0' }}>{post.frontmatter.title}</h1>
+      <p
+        style={{
+          color: '#c3c3c3',
+          marginBottom: '1rem',
+          fontSize: '75%',
+        }}
+      >
+        {post.frontmatter.date}
+      </p>
       <hr />
       <section dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
@@ -83,8 +66,8 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         path={post.frontmatter.path}
         siteUrl={site.siteMetadata.siteUrl}
       />
-    </ContentWrapper>
-  </BlogContainer>
+    </section>
+  </main>
 )
 
 export default BlogTemplate
