@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 
-const ShareToSocialWrapper = styled.section`
-  float: right;
-  margin-bottom: 2rem;
-`
 const ShareToSocial = ({ title = '', path, siteUrl }) => (
-  <ShareToSocialWrapper>
+  <section
+    style={{
+      float: 'right',
+      marginBottom: '2rem',
+    }}
+  >
     Share to :{' '}
     <a
       href={`https://facebook.com/sharer.php?u=${siteUrl}${path}`}
@@ -26,7 +26,7 @@ const ShareToSocial = ({ title = '', path, siteUrl }) => (
     >
       Twitter
     </a>
-  </ShareToSocialWrapper>
+  </section>
 )
 
 ShareToSocial.propTypes = {
