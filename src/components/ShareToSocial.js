@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-const ShareToSocial = ({ title = '', path, siteUrl }) => (
-  <section
-    style={{
-      float: 'right',
-      marginBottom: '2rem',
-    }}
-  >
+const ShareToSocialWrapper = styled.section`
+  float: right;
+  margin-bottom: 2rem;
+`
+const ShareToSocial = memo(({ title = '', path, siteUrl }) => (
+  <ShareToSocialWrapper>
     Share to :{' '}
     <a
       href={`https://facebook.com/sharer.php?u=${siteUrl}${path}`}
@@ -26,8 +26,8 @@ const ShareToSocial = ({ title = '', path, siteUrl }) => (
     >
       Twitter
     </a>
-  </section>
-)
+  </ShareToSocialWrapper>
+))
 
 ShareToSocial.propTypes = {
   title: PropTypes.string,
