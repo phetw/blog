@@ -4,7 +4,9 @@ import ProfileImageSrc from '../../static/img/me.jpg'
 
 const WhoAMI = () => (
   <section className="profile-wrapper">
-    <img className="profile-img" src={ProfileImageSrc} />
+    <section className="profile-img">
+      <img src={ProfileImageSrc} />
+    </section>
     <section style={{ alignSelf: 'center' }}>
       <a
         className="profile-name"
