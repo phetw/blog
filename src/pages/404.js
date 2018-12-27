@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const styles = {
   display: 'flex',
@@ -10,18 +10,14 @@ const styles = {
 
 const textStyles = { display: 'inline-block' }
 
-function NotFound() {
-  return (
-    <main style={styles}>
-      <section style={{ maxWidth: '400px', alignSelf: 'center' }}>
-        <h1 style={textStyles}>404 </h1>
-        <span style={{ margin: '0 1rem' }}> | </span>
-        <p style={textStyles}> page not found</p>
-      </section>
-    </main>
-  )
-}
-
-NotFound.propTypes = {}
+const NotFound = memo(() => (
+  <main style={styles}>
+    <section style={{ maxWidth: '400px', alignSelf: 'center' }}>
+      <h1 style={textStyles}>404 </h1>
+      <span style={{ margin: '0 1rem' }}> | </span>
+      <p style={textStyles}> page not found</p>
+    </section>
+  </main>
+))
 
 export default NotFound

@@ -1,105 +1,70 @@
-import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import React, { memo } from 'react'
+import styled from 'styled-components'
 
-import ShareToSocial from '../components/ShareToSocial'
+import ProfileImageSrc from '../../static/img/me.jpg'
 
-const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
-  <Fragment>
-    <Helmet
-      htmlAttributes={{ lang: 'th' }}
-      title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
-      meta={[
-        { name: 'author', content: site.siteMetadata.author },
-        {
-          name: 'description',
-          content: `${post.frontmatter.description} | ${
-            post.excerpt
-          } written by ${site.siteMetadata.author}`,
-        },
-        { name: 'og:title', content: post.frontmatter.title },
-        {
-          name: 'og:description',
-          content: `${post.frontmatter.description} written by ${
-            site.siteMetadata.author
-          }`,
-        },
-        {
-          name: 'og:image',
-          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
-        },
-        {
-          name: 'twitter:title',
-          content: post.frontmatter.title,
-        },
-        {
-          name: 'twitter:description',
-          content: post.frontmatter.description,
-        },
-        {
-          name: 'twitter:image',
-          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
-        },
-      ]}
-    />
-    <main style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <section style={{ margin: '1.25rem 1.75rem' }}>
-        <nav style={{ display: 'flex', flexDirection: 'row' }}>
-          <Link style={{ fontSize: '1rem' }} to="/">
-            Home
-          </Link>
-        </nav>
-        <h1 style={{ margin: '1.35rem 0' }}>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            color: '#c3c3c3',
-            marginBottom: '1rem',
-            fontSize: '75%',
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <hr />
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <ShareToSocial
-          title={post.frontmatter.title}
-          path={post.frontmatter.path}
-          siteUrl={site.siteMetadata.siteUrl}
-        />
-      </section>
-    </main>
-  </Fragment>
-)
+const SectionWrapper = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-top: 1.5rem;
+  @media screen and (min-width: 700px) {
+    height: 120px;
+  }
 
-export default BlogTemplate
-
-export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-        siteUrl
-      }
-    }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      excerpt(format: PLAIN, pruneLength: 300)
-      frontmatter {
-        path
-        title
-        description
-        date(formatString: "DD MMMM, YYYY")
-        thumbnail {
-          childImageSharp {
-            resize(width: 800, height: 420, cropFocus: CENTER, toFormat: JPG) {
-              src
-            }
-          }
-        }
-      }
-    }
+  @media screen and (max-width: 699px) {
+    height: 90px;
   }
 `
+
+const ProfileImage = styled.img`
+  align-self: center;
+  @media screen and (min-width: 700px) {
+    width: 105px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+
+  @media screen and (max-width: 699px) {
+    display: none;
+  }
+`
+
+const ProfileDetails = styled.section`
+  align-self: center;
+`
+
+const ProfileName = styled.a`
+  color: #252525;
+  margin: 0;
+  font-size: 120%;
+  font-weight: 700;
+`
+
+const CoolOneLiner = styled.p`
+  color: #bbbbbb;
+  font-size: 80%;
+  margin: 0;
+`
+
+const WhoAMI = memo(() => (
+  <SectionWrapper>
+    <ProfileImage src={ProfileImageSrc} />
+    <ProfileDetails>
+      <ProfileName
+        href="https://rappad.github.io/wasuwat-limsuparhat"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Wasuwat Limsuparhat
+      </ProfileName>
+      <CoolOneLiner>
+        I write to remind and keep track on what I've learn.
+      </CoolOneLiner>
+    </ProfileDetails>
+  </SectionWrapper>
+))
+
+export default WhoAMI
