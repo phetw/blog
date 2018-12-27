@@ -27,7 +27,7 @@ workbox.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f382e53afba53e6d4126dbba85550927"
+    "revision": "e3da9a71d063aaa5b45b509624f8f237"
   },
   {
     "url": "static/d/164/path---404-html-516-62a-NZuapzHg3X9TaN1iIixfv1W23E.json"
