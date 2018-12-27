@@ -8,36 +8,33 @@
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
-/blog/offline-plugin-app-shell-fallback/
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/component---node-modules-gatsby-plugin-offline-app-shell-js-48d6b49fb02339145f55.js>; rel=preload; as=script
 /blog/go-out-and-attend-an-interview
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/how-i-quit-smoking
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/first-1000-github-contributions
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/introduction-to-jam-stack
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/laos-2018-trip-journal
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/gatsby-first-time
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/why-book-instead-of-ebooks
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/404/
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/component---src-pages-404-js-c5573d78bac31ab03f99.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/component---src-pages-404-js-72f03f94da239ff8e2fa.js>; rel=preload; as=script
 /blog/
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/0-299f12823b5468b92730.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/0-69f72f32783e1cec9076.js>; rel=preload; as=script
 /blog/404.html
-  Link: </blog/webpack-runtime-82542996c366b6db4190.js>; rel=preload; as=script
-  Link: </blog/component---src-pages-404-js-c5573d78bac31ab03f99.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-cd19d65dfdbfac82a6fc.js>; rel=preload; as=script
+  Link: </blog/component---src-pages-404-js-72f03f94da239ff8e2fa.js>; rel=preload; as=script
