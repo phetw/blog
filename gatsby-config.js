@@ -80,6 +80,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 1139848,
+        sv: 6,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         head: true,
