@@ -21,18 +21,24 @@
     align-self: center;
 }
 
+.profile-img img {
+    border-radius: 50%;
+}
+
+
 @media screen and (min-width: 700px) {
     .profile-img {
         width: 105px;
         height: 100px;
-        border-radius: 50%;
         margin-bottom: 0;
         margin-right: 1.5rem;
     }
 }
 
 @media screen and (max-width: 699px) {
-    .profile-img {
+
+    .profile-img,
+    .profile-img img {
         display: none;
     }
 }
