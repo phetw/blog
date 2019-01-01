@@ -1,13 +1,12 @@
 ---
-path: /how-i-quit-smoking
-title: I quit smoking
+path: /i-quit-smoking
+title: Best achievement of 2018 - I quit smoking
 description: >-
-  Story of why I start and I quit smoking after 6 years of paying to destroying
-  my own health.
+  Story of why I start and I quit smoking after years of wasting money and
+  destroying my own health.
 date: 2018-12-24T11:09:58.176Z
 thumbnail: /img/daniele-levis-pelusi-217494-unsplash.jpg
 ---
-
 ![Smokes](/img/daniele-levis-pelusi-217494-unsplash.jpg)
 
 I started smoking since the age of 16. I thought it was cool and relaxing. It was the time that you get to chat with all your friends, telling jokes, listen to each other's problems. I had convinced myself that it helps me concentrate and focus more. So yeah, I did smoke a lot during the time of exams and it somewhat helped. I could remember the picture of every page of the Physics book.
@@ -24,12 +23,10 @@ The life-changing pivot was when I first started working 6 months ago. Work was 
 
 Subsequently, I got sick very often while working in Bangkok.
 
-It was office syndrome. I have no choice as the part of my job is to solve problems using my coding skills and that I have to sit in front of a computer.
+It was the office syndrome. I have no choice as the part of my job is to solve problems using my coding skills and that, I have to sit in front of a computer.
 
-I started to exercise regularly and create a quit smoking goal like many times before. Instead of smoking every break I get, I code. I even code after work. I love it.
+I started to exercise regularly and set a quit smoking goal like I did many times before which all ended up failed. Instead of smoking every break I get, I code. I even code during my free time. I love it. This time was a success.
 
-I don't smoke anymore. Not even while drinking. Not even when I need concentration. Not even when my friends are smoking. I hated the smoke and I always stay away from smokers. I did not miss smoking. I've successfully convince myself not to use cigarettes as the solution to every problem. There was always better solutions. I was very proud of myself.
+I don't smoke anymore. Not even while drinking. Not even when I need concentration. Not even when my friends are smoking. I have become a person that hated the smoke and I always try to stay away from smokers. Strange thing is that, I did not miss smoking at all. I've successfully convince myself not to use cigarettes as the solution to every problem. There was always better solutions. I was very proud.
 
-It was one of my proudest achievement of 2018.
-
-> Was it the passion that helps me?
+However, one may have different solutions and strategies in quitting. For me, it's just a matter your willingness. If you have a strong will and stay focus, you can achieve anything in life.
