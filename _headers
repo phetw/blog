@@ -8,33 +8,33 @@
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
-/blog/go-out-and-attend-an-interview
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+/blog/interview
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/i-quit-smoking
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/first-1000-github-contributions
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/introduction-to-jam-stack
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/laos-2018-trip-journal
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/gatsby-first-time
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/why-book-instead-of-ebooks
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/404/
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/component---src-pages-404-js-2b518bafd4cd243beb73.js>; rel=preload; as=script
 /blog/
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/0-c306ebcfad3c0450fd63.js>; rel=preload; as=script
 /blog/404.html
-  Link: </blog/webpack-runtime-080ac5c2e2e16fb55dcf.js>; rel=preload; as=script
+  Link: </blog/webpack-runtime-7fb4a3cb6285097da954.js>; rel=preload; as=script
   Link: </blog/component---src-pages-404-js-2b518bafd4cd243beb73.js>; rel=preload; as=script
