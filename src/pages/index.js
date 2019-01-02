@@ -1,94 +1,73 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import Helmet from 'react-helmet'
+import React, { memo } from 'react'
+import { graphql, Link, navigate } from 'gatsby'
 import styled from 'styled-components'
 
-import WhoAMI from '../components/WhoAmI'
+import SEO from '../components/Seo'
+import Layout from '../components/Layout'
 
-import favicon from '../../static/favicon.png'
-
-const BlogListContainer = styled.main`
-  margin: 1rem auto;
-  padding-bottom: 3.5rem;
-  width: 100%;
-  max-width: 800px;
-`
-
-const BlogTitleContainer = styled.section`
-  width: 72%;
+const BlogItem = styled.article`
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
   margin: 0 auto;
+  margin-bottom: 1.35rem;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 550px;
+  padding: 2.15rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(25, 17, 34, 0.05);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(25, 17, 34, 0.1);
+  }
 `
 
-const BlogItem = styled(BlogTitleContainer)``
-
-const BlogItemTitle = styled.h1``
+const BlogItemTitle = styled.h1`
+  margin: 1rem 0;
+  font-size: 1.35rem;
+`
 
 const BlogItemContentPreview = styled.p`
-  color: #505050;
-  max-width: 100%;
+  color: #616161;
+  font-size: 90%;
   margin-bottom: 1.2rem;
 `
 
 const BlogItemPublishDate = styled.p`
-  float: right;
   font-size: 12px;
   color: #c3c3c3;
-  margin: 0 2.35rem;
+  margin: 0;
+  align-self: flex-end;
 `
 
-export default function Home({
-  data: { site, allImageSharp, allMarkdownRemark },
-}) {
-  const { title, author, description } = site.siteMetadata
-  const ogImage = allImageSharp.edges[0]
-  const { edges: posts } = allMarkdownRemark
+const Home = memo(({ data: { allMarkdownRemark } }) => (
+  <Layout>
+    <SEO subTitle="personal blogs" description="I write blogs to remind and keep track on what I ve learn."/>
+    {allMarkdownRemark.edges
+      .filter(post => post.node.frontmatter.title.length > 0)
+      .map(({ node: post }) => (
+        <BlogItem key={post.id} onClick={() => navigate(post.frontmatter.path)}>
+          <BlogItemTitle>
+            <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+          </BlogItemTitle>
+          <BlogItemContentPreview>
+            {post.frontmatter.description}
+          </BlogItemContentPreview>
+          <BlogItemPublishDate>{post.frontmatter.date}</BlogItemPublishDate>
+        </BlogItem>
+      ))}
+  </Layout>
+))
 
-  return (
-    <BlogListContainer>
-      <Helmet
-        htmlAttributes={{ lang: 'th' }}
-        title={title}
-        meta={[
-          { name: 'author', content: author },
-          { name: 'description', content: description + ' By ' + author },
-          { name: 'og:title', content: title },
-          { name: 'og:description', content: description },
-          {
-            name: 'og:image',
-            content: ogImage.node.resize.src,
-          },
-        ]}
-        link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
-      />
-      <BlogTitleContainer>
-        <WhoAMI />
-      </BlogTitleContainer>
-      {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => (
-          <BlogItem key={post.id}>
-            <BlogItemTitle>
-              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-            </BlogItemTitle>
-            <BlogItemContentPreview>
-              {post.frontmatter.description} - <span>{post.excerpt}</span>
-            </BlogItemContentPreview>
-            <BlogItemPublishDate>{post.frontmatter.date}</BlogItemPublishDate>
-          </BlogItem>
-        ))}
-    </BlogListContainer>
-  )
-}
+export default Home
 
 export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        author
-      }
-    }
+  query BlogQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -99,16 +78,6 @@ export const pageQuery = graphql`
             title
             description
             date(formatString: "DD MMMM, YYYY")
-          }
-        }
-      }
-    }
-    allImageSharp(filter: { resize: { originalName: { eq: "me.jpg" } } }) {
-      edges {
-        node {
-          id
-          resize(quality: 40, width: 600, height: 315, toFormat: JPG) {
-            src
           }
         }
       }

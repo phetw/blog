@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { Fragment, memo } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
-const Navbar = styled.nav`
-  display: flex;
-  flex-direction: row;
-`
+import Layout from '../components/Layout'
+import BlogFooter from '../components/BlogFooter'
+
+import favicon from '../../static/favicon.png'
 
 const BlogContainer = styled.main`
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(25, 17, 34, 0.05);
+  @media screen and (max-width: 600px) {
+    padding: 0rem;
+  }
+  @media screen and (min-width: 601px) {
+    padding: 1.5rem 1rem;
+  }
 `
 
 const ContentWrapper = styled.section`
@@ -27,13 +35,8 @@ const PublishDate = styled.p`
   font-size: 75%;
 `
 
-const ShareToSocial = styled.section`
-  float: right;
-  margin-bottom: 2rem;
-`
-
-const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
-  <BlogContainer>
+const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
+  <Fragment>
     <Helmet
       htmlAttributes={{ lang: 'th' }}
       title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
@@ -41,50 +44,52 @@ const BlogTemplate = ({ data: { site, markdownRemark: post } }) => (
         { name: 'author', content: site.siteMetadata.author },
         {
           name: 'description',
-          content: `${post.frontmatter.description} | ${post.excerpt} | ${
-            site.siteMetadata.description
-          } By ${site.siteMetadata.author}`,
+          content: `${post.frontmatter.description}| ${post.excerpt} `,
         },
         { name: 'og:title', content: post.frontmatter.title },
         {
           name: 'og:description',
-          content: `${post.frontmatter.description} By ${
-            site.siteMetadata.author
-          }`,
+          content: `${post.frontmatter.description} `,
         },
         {
           name: 'og:image',
           content: post.frontmatter.thumbnail.childImageSharp.resize.src,
         },
+        {
+          name: 'twitter:title',
+          content: post.frontmatter.title,
+        },
+        {
+          name: 'twitter:description',
+          content: post.frontmatter.description,
+        },
+        {
+          name: 'twitter:image',
+          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
+        },
       ]}
+      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
-    <ContentWrapper>
-      <Navbar>
-        <Link style={{ fontSize: '1rem' }} to="/">
-          Home
-        </Link>
-      </Navbar>
-      <Title>{post.frontmatter.title}</Title>
-      <PublishDate>{post.frontmatter.date}</PublishDate>
-      <hr />
-      <section dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
-      <ShareToSocial>
-        Share to :{' '}
-        <a
-          href={`https://facebook.com/sharer.php?u=${
-            site.siteMetadata.siteUrl
-          }${post.frontmatter.path}`}
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Share on Facebook"
-        >
-          Facebook
-        </a>
-      </ShareToSocial>
-    </ContentWrapper>
-  </BlogContainer>
-)
+    <Layout>
+      <BlogContainer>
+        <ContentWrapper>
+          <Title>{post.frontmatter.title}</Title>
+          <PublishDate>{post.frontmatter.date}</PublishDate>
+
+          <hr />
+          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr />
+
+          <BlogFooter
+            title={post.frontmatter.title}
+            path={post.frontmatter.path}
+            siteUrl={site.siteMetadata.siteUrl}
+          />
+        </ContentWrapper>
+      </BlogContainer>
+    </Layout>
+  </Fragment>
+))
 
 export default BlogTemplate
 
