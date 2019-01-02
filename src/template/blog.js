@@ -42,7 +42,7 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
         { name: 'author', content: site.siteMetadata.author },
         {
           name: 'description',
-          content: `${post.frontmatter.description} | ${post.excerpt} `,
+          content: `${post.frontmatter.description}| ${post.excerpt} `,
         },
         { name: 'og:title', content: post.frontmatter.title },
         {
