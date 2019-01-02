@@ -1,17 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `wasuwat s journal`,
+    title: `Wasuwat Limsuparhat`,
     author: `Wasuwat Limsuparhat`,
-    description: 'I write to remind and keep track on what I ve learn.',
-    siteUrl: 'https://rappad.github.io/blog/',
+    description: `I write blogs to remind and keep track on what I ve learn.`,
+    siteUrl: `https://rappad.github.io/blog/`,
   },
   pathPrefix: '/blog',
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/img`,
         name: 'uploads',
+        path: `${__dirname}/static/img`,
       },
     },
     'gatsby-plugin-catch-links',
