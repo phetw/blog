@@ -1,7 +1,7 @@
 {
   "name": "wasuwat-personal-blog",
   "description": "My personal blog - powered by Gatsby",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Wasuwat Limsuparhat <wasuwat.se@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
