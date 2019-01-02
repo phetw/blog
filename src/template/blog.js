@@ -6,6 +6,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import BlogFooter from '../components/BlogFooter'
 
+import favicon from '../../static/favicon.png'
+
 const BlogContainer = styled.main`
   width: 100%;
   max-width: 700px;
@@ -66,6 +68,7 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
           content: post.frontmatter.thumbnail.childImageSharp.resize.src,
         },
       ]}
+      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
     />
     <Layout>
       <BlogContainer>
