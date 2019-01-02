@@ -62,7 +62,7 @@ SEO.propTypes = {
 
 export default SEO
 
-export const query = graphql`
+const query = graphql`
   query SeoQuery {
     site {
       siteMetadata {
