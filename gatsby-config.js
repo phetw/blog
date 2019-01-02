@@ -1,17 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `wasuwat s journal`,
+    title: `Wasuwat Limsuparhat`,
     author: `Wasuwat Limsuparhat`,
-    description: "I write to remind and keep track on what I've learn.",
-    siteUrl: 'https://rappad.github.io/blog/',
+    description: `I write blogs to remind and keep track on what I ve learn.`,
+    siteUrl: `https://rappad.github.io/blog/`,
   },
   pathPrefix: '/blog',
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/img`,
         name: 'uploads',
+        path: `${__dirname}/static/img`,
       },
     },
     'gatsby-plugin-catch-links',
@@ -86,26 +86,6 @@ module.exports = {
         trackingId: 'UA-128174751-2',
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `wasuwat's thought`,
-        short_name: `W`,
-        start_url: '.',
-        display: 'standalone',
-        background_color: `#fff`,
-        theme_color: `#d65947`,
-        display: `minimal-ui`,
-        icon: `static/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        cacheId: `wasuwat-blog`,
-      },
-    },
-    'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
