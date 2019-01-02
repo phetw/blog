@@ -1,18 +1,22 @@
 import React, { Fragment, memo } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import ShareToSocial from '../components/ShareToSocial'
-
-const Navbar = styled.nav`
-  display: flex;
-  flex-direction: row;
-`
+import Layout from '../components/Layout'
+import BlogFooter from '../components/BlogFooter'
 
 const BlogContainer = styled.main`
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(25, 17, 34, 0.05);
+  @media screen and (max-width: 600px) {
+    padding: 0rem;
+  }
+  @media screen and (min-width: 601px) {
+    padding: 1.5rem 1rem;
+  }
 `
 
 const ContentWrapper = styled.section`
@@ -38,16 +42,12 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
         { name: 'author', content: site.siteMetadata.author },
         {
           name: 'description',
-          content: `${post.frontmatter.description} | ${
-            post.excerpt
-          } written by ${site.siteMetadata.author}`,
+          content: `${post.frontmatter.description} | ${post.excerpt} `,
         },
         { name: 'og:title', content: post.frontmatter.title },
         {
           name: 'og:description',
-          content: `${post.frontmatter.description} written by ${
-            site.siteMetadata.author
-          }`,
+          content: `${post.frontmatter.description} `,
         },
         {
           name: 'og:image',
@@ -67,25 +67,24 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
         },
       ]}
     />
-    <BlogContainer>
-      <ContentWrapper>
-        <Navbar>
-          <Link style={{ fontSize: '1rem' }} to="/">
-            Home
-          </Link>
-        </Navbar>
-        <Title>{post.frontmatter.title}</Title>
-        <PublishDate>{post.frontmatter.date}</PublishDate>
-        <hr />
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <ShareToSocial
-          title={post.frontmatter.title}
-          path={post.frontmatter.path}
-          siteUrl={site.siteMetadata.siteUrl}
-        />
-      </ContentWrapper>
-    </BlogContainer>
+    <Layout>
+      <BlogContainer>
+        <ContentWrapper>
+          <Title>{post.frontmatter.title}</Title>
+          <PublishDate>{post.frontmatter.date}</PublishDate>
+
+          <hr />
+          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr />
+
+          <BlogFooter
+            title={post.frontmatter.title}
+            path={post.frontmatter.path}
+            siteUrl={site.siteMetadata.siteUrl}
+          />
+        </ContentWrapper>
+      </BlogContainer>
+    </Layout>
   </Fragment>
 ))
 
