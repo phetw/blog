@@ -74,6 +74,7 @@ const Index = memo(props => (
         >
           GitHub
         </SocialLink>
+        •
         <SocialLink
           rel="noopener"
           target="_blank"
@@ -81,6 +82,7 @@ const Index = memo(props => (
         >
           Medium
         </SocialLink>
+        •
         <SocialLink
           rel="noopener"
           target="_blank"
