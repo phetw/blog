@@ -17,6 +17,9 @@ grandViewTheme.headerWeight = 700
 grandViewTheme.bodyWeight = 300
 grandViewTheme.headerColor = 'hsla(0,0%,0%,0.875)'
 grandViewTheme.bodyColor = 'hsla(0,0%,0%,0.815)'
+grandViewTheme.overrideThemeStyles = () => ({
+  '@media (max-width: 480px){blockquote{margin-left:0}}': {},
+})
 
 const typography = new Typography(grandViewTheme)
 
