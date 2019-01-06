@@ -17,18 +17,14 @@ thumbnail: /img/aron-visuals-322314-unsplash.jpg
 
 # Throttle
 
-สมมุติว่าเราต้องการ detect event resize ของ user
+สมมุติว่าเราต้องการ detect event resize ของ browser
 
 ```
- window.addEventListener('resize', function listenToResizeEvent() { ... }) 
+ window.addEventListener('resize', function listenToResizeEvent(){}) 
 ```
-
-
 
 โดยปกติแล้ว ทุกๆ pixel ที่หน้าจอถูก resize จะไปเรียก `listenToResizeEvent()` ซึ่งอาจจะทำให้มีผลกระทบกับ performance ได้หากมีการคำนวนอยู่ใน function นั้นๆเยอะ 
 
 แต่ถ้าหากเรา throttle function นี้  ทุกๆ 300ms จะเป็นผลให้ `listenToResizeEvent()` ถูกเรียกทุกๆ 300ms แทน ทำให้ประหยัด resource ขึ้น โดย throttle นั้นจะจำกัดจำนวนที่เรียก function นั้นๆในเวลาที่กำหนด ซึ่งในเคสนี้คือ 1 ครั้วต่อ 300ms
-
-
 
 > จะเห็นได้ว่า ถึงแม้ทั้งคู่จะแตกต่าง และทำงานไม่เหมือนกัน  แต่จริงๆแล้วทั้งคู่นั้นมีจุดประสงค์เดียวกันนั่นคือ performance optimization และทำหน้าที่เหมือนกับประตูระบายน้ำที่คอยจำกัดปริมาณของน้ำไม่ให้ไหลลงสู่อีกฝั่งมากเกินไป
