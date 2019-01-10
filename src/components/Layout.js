@@ -7,8 +7,8 @@ const LayoutWrapper = styled.main`
   min-width: 100vw;
   min-height: 100vh;
   padding: 1.25rem 1.25rem 3rem;
-  background-color: ${props =>
-    props.theme.main === 'light' ? '#f4f6fa' : '#666'};
+  background-color: ${({ theme }) =>
+    theme.main === 'light' ? '#f4f6fa' : '#666'};
   display: flex;
   flex-direction: column;
   align-items: center;

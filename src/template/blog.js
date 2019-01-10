@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
-import Content from '../components/Content'
 import Layout from '../components/Layout'
 import BlogFooter from '../components/BlogFooter'
 
@@ -43,6 +42,27 @@ const PublishDate = styled.p`
 const VerticalLine = styled.hr`
   background: ${props =>
     props.theme.main === 'light' ? 'hsla(0,0%,0%,0.2)' : '#c3c3c3'};
+`
+
+const Content = styled.section`
+  color: ${props =>
+    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#b9b9b9'};
+  h1 {
+    color: ${props =>
+      props.theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
+  }
+  blockquote {
+    p {
+      color: ${props =>
+        props.theme.main === 'light' ? 'hsla(0,0%,0%,0.59)' : '#888888'};
+    }
+  }
+  p {
+    code {
+      background: ${props =>
+        props.theme.main === 'light' ? '#f5f2f0' : '#c7c7c7'};
+    }
+  }
 `
 
 const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
