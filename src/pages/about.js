@@ -8,13 +8,13 @@ import Layout from '../components/Layout'
 
 const Topic = styled.h1`
   margin: 1.5rem 0;
-  color: ${props =>
-    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
+  color: ${({ theme }) =>
+    theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
 `
 
 const Detail = styled.p`
-  color: ${props =>
-    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
+  color: ${({ theme }) =>
+    theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
 `
 
 const SocialWrapper = styled.section`
@@ -30,8 +30,8 @@ const SocialLink = styled.a`
 `
 
 const DotSeparator = styled.span`
-  color: ${props =>
-    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
+  color: ${({ theme }) =>
+    theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
 `
 
 const Index = memo(props => (

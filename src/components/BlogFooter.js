@@ -5,8 +5,9 @@ import styled from 'styled-components'
 const ShareToSocialWrapper = styled.section`
   float: right;
   margin-bottom: 2rem;
-  color: ${props => (props.theme.main === 'light' ? 'black' : '#c3c3c3')};
+  color: ${({ theme }) => (theme.main === 'light' ? 'black' : '#c3c3c3')};
 `
+
 const ShareToSocial = memo(({ title = '', path, siteUrl }) => (
   <ShareToSocialWrapper>
     Share to :{' '}
