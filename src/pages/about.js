@@ -8,6 +8,13 @@ import Layout from '../components/Layout'
 
 const Topic = styled.h1`
   margin: 1.5rem 0;
+  color: ${props =>
+    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
+`
+
+const Detail = styled.p`
+  color: ${props =>
+    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
 `
 
 const SocialWrapper = styled.section`
@@ -22,10 +29,15 @@ const SocialLink = styled.a`
   margin: 0 0.75rem;
 `
 
+const DotSeparator = styled.span`
+  color: ${props =>
+    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
+`
+
 const Index = memo(props => (
   <Layout>
     <SEO
-      subTitle="a software developer, reader and coffee lover."
+      subTitle="a software developer, reader, coffee lover and a lifelong learner."
       description="Get to know more about me"
     />
     <Card>
@@ -43,28 +55,26 @@ const Index = memo(props => (
         fixed={props.data.file.childImageSharp.fixed}
       />
       <Topic>Who Am I </Topic>
-      <p>
+      <Detail>
         Hello! <span role="img">🙏</span> My name is Wasuwat Limsuparhat, I am a
         Javascript developer and a web development enthusiast based in Bangkok,
         Thailand. Nothing starts before a cup of black coffee{' '}
         <span role="img">☕️</span>.
-      </p>
+      </Detail>
       <Topic>What I do</Topic>
-      <p>
+      <Detail>
         I love building a highly performant, beautiful and easy-to-use websites
         and these are things that I always try to achieve when building one. In
         past years, my works primarily focus on front-end web development with
         React.js and few of Angular projects. I also do mini projects on Github
         during my free time, check them out.
-      </p>
+      </Detail>
       <Topic>Other interests</Topic>
-      <p>
-        I like readings and writing, but I tends to forget very easily. Which is
-        the reason why I started writing personal blogs. I also dedicated a fair
-        amount of my free time into the blockchain technology including both
-        public and private kinds of blockchain which I believe both could
-        disrupt many industries in coming years.
-      </p>
+      <Detail>
+        I like readings and learning things, but I tends to forget very easily
+        which is the reason why I started writing blogs. I play games and I do
+        love watching, playing football.
+      </Detail>
       <Topic>Get in touch</Topic>
       <SocialWrapper>
         <SocialLink
@@ -74,7 +84,7 @@ const Index = memo(props => (
         >
           GitHub
         </SocialLink>
-        •
+        <DotSeparator>•</DotSeparator>
         <SocialLink
           rel="noopener"
           target="_blank"
@@ -82,7 +92,7 @@ const Index = memo(props => (
         >
           Medium
         </SocialLink>
-        •
+        <DotSeparator>•</DotSeparator>
         <SocialLink
           rel="noopener"
           target="_blank"

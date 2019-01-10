@@ -18,7 +18,7 @@ const SEO = memo(({ subTitle = '', description = '' }) => (
       return (
         <Helmet
           htmlAttributes={{ lang: 'th' }}
-          title={`${title} - ${subTitle}`}
+          title={`${title} ${subTitle ? ` - ${subTitle}` : ''}`}
           meta={[
             { name: 'author', content: author },
             {

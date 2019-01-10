@@ -16,7 +16,7 @@ grandViewTheme.bodyFontFamily = ['Montserrat', 'Kanit']
 grandViewTheme.headerWeight = 700
 grandViewTheme.bodyWeight = 300
 grandViewTheme.headerColor = 'hsla(0,0%,0%,0.875)'
-grandViewTheme.bodyColor = 'hsla(0,0%,0%,0.815)'
+grandViewTheme.bodyColor = 'hsla(0,0%,0%,0.8)'
 grandViewTheme.overrideThemeStyles = () => ({
   '@media (max-width: 480px){blockquote{margin-left:0}}': {},
 })

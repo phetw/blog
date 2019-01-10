@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
+import Content from '../components/Content'
 import Layout from '../components/Layout'
 import BlogFooter from '../components/BlogFooter'
 
@@ -10,8 +11,10 @@ import favicon from '../../static/favicon.png'
 
 const BlogContainer = styled.main`
   width: 100%;
+  border-radius: 4px;
   max-width: 700px;
-  background-color: white;
+  background-color: ${props =>
+    props.theme.main === 'light' ? 'white' : '#424242'};
   box-shadow: 0 3px 10px rgba(25, 17, 34, 0.05);
   @media screen and (max-width: 600px) {
     padding: 0rem;
@@ -27,12 +30,19 @@ const ContentWrapper = styled.section`
 
 const Title = styled.h1`
   margin: 1.35rem 0;
+  color: ${props =>
+    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
 `
 
 const PublishDate = styled.p`
-  color: #c3c3c3;
-  margin-bottom: 1rem;
   font-size: 75%;
+  margin-bottom: 1rem;
+  color: ${props => (props.theme.main === 'light' ? '#c3c3c3' : '#797979')};
+`
+
+const VerticalLine = styled.hr`
+  background: ${props =>
+    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.2)' : '#c3c3c3'};
 `
 
 const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
@@ -76,9 +86,9 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
           <Title>{post.frontmatter.title}</Title>
           <PublishDate>{post.frontmatter.date}</PublishDate>
 
-          <hr />
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
+          <VerticalLine />
+          <Content dangerouslySetInnerHTML={{ __html: post.html }} />
+          <VerticalLine />
 
           <BlogFooter
             title={post.frontmatter.title}
