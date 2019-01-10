@@ -1,7 +1,7 @@
 ---
 path: /git-commit-amend
 title: 'Git : git commit --amend'
-description: ทำอย่างไรเมื่อ git commit พลาด 101
+description: "\U0001F691 ทำอย่างไรเมื่อ git commit พลาด"
 date: 2019-01-08T04:39:51.059Z
 thumbnail: /img/mr-cup-fabien-barral-86074-unsplash.jpg
 ---
