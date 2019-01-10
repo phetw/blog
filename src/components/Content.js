@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Content = styled.section`
   color: ${props =>
-    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
+    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#b9b9b9'};
   h1 {
     color: ${props =>
       props.theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
