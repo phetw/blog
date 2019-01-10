@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
 import Navbar from './Navbar'
+import ThemeToggler from './ThemeToggler'
 
 const LayoutWrapper = styled.main`
   min-width: 100vw;
@@ -14,36 +15,16 @@ const LayoutWrapper = styled.main`
   align-items: center;
 `
 
-const ThemeToggler = styled.span`
-  cursor: pointer;
-`
-
 export default class Layout extends PureComponent {
-  state = {
-    theme: {
-      main: 'light',
-    },
-  }
-
-  componentDidMount() {
-    this.setDefaultTheme()
-  }
-
-  setDefaultTheme = () => {
-    this.setState(
-      {
-        theme: {
-          main: localStorage.getItem('theme'),
-        },
+  constructor(props) {
+    super(props)
+    this.state = {
+      theme: {
+        main: localStorage.getItem('theme')
+          ? localStorage.getItem('theme')
+          : 'light',
       },
-      () => {
-        this.setTheme(this.state.theme.main)
-      }
-    )
-  }
-
-  setTheme = theme => {
-    localStorage.setItem('theme', theme)
+    }
   }
 
   toggleTheme = () => {
@@ -59,7 +40,7 @@ export default class Layout extends PureComponent {
               },
       }),
       () => {
-        this.setTheme(this.state.theme.main)
+        localStorage.setItem('theme', this.state.theme.main)
       }
     )
   }
@@ -68,9 +49,10 @@ export default class Layout extends PureComponent {
     return (
       <ThemeProvider theme={this.state.theme}>
         <LayoutWrapper>
-          <ThemeToggler role="emoji" onClick={this.toggleTheme}>
-            {this.state.theme.main === 'light' ? '☀️' : '🌙'}
-          </ThemeToggler>
+          <ThemeToggler
+            theme={this.state.theme.main}
+            onClick={this.toggleTheme}
+          />
           <Navbar />
           {this.props.children}
         </LayoutWrapper>
