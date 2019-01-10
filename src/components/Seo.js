@@ -58,6 +58,7 @@ const SEO = memo(({ subTitle = '', description = '' }) => (
 
 SEO.propTypes = {
   subTitle: PropTypes.string,
+  description: PropTypes.string,
 }
 
 export default SEO
