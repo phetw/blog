@@ -3,12 +3,12 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 
-import BlogTitle from '../components/BlogTitle'
-import BlogPublishDate from '../components/BlogPublishDate'
-import BlogContent from '../components/BlogContent'
-import BlogFooter from '../components/BlogFooter'
+import Title from '../components/blog/Title'
+import BlogPublishDate from '../components/blog/PublishDate'
+import BlogContent from '../components/blog/Content'
+import BlogFooter from '../components/blog/Footer'
 
 import favicon from '../../static/favicon.png'
 
@@ -27,7 +27,7 @@ const BlogContainer = styled.main`
   }
 `
 
-const Title = styled(BlogTitle)`
+const BlogTitle = styled(Title)`
   font-size: 2rem;
 `
 
@@ -78,7 +78,7 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
     <Layout>
       <BlogContainer>
         <BlogMetaData>
-          <Title>{post.frontmatter.title}</Title>
+          <BlogTitle>{post.frontmatter.title}</BlogTitle>
           <BlogPublishDate>{post.frontmatter.date}</BlogPublishDate>
         </BlogMetaData>
 

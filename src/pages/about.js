@@ -4,16 +4,12 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 import SEO from '../components/Seo'
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 
-import ProfileCard from '../components/ProfileCard'
+import Card from '../components/profile/Card'
 
-import BlogTitle from '../components/BlogTitle'
-import BlogContent from '../components/BlogContent'
-
-const Topic = styled(BlogTitle)``
-
-const Detail = styled(BlogContent)``
+import Topic from '../components/blog/Title'
+import Detail from '../components/blog/Content'
 
 const SocialWrapper = styled.section`
   display: flex;
@@ -37,7 +33,7 @@ const Index = memo(props => (
       subTitle="a software developer, reader, coffee lover and a lifelong learner."
       description="Get to know more about me"
     />
-    <ProfileCard>
+    <Card>
       <Img
         title="My profile picture"
         alt="My profile picture"
@@ -97,7 +93,7 @@ const Index = memo(props => (
           LinkedIn
         </a>
       </SocialWrapper>
-    </ProfileCard>
+    </Card>
   </Layout>
 ))
 
