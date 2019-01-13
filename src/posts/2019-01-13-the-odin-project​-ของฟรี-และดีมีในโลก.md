@@ -1,9 +1,7 @@
 ---
 path: /the-odin-project
 title: 'The Odin Project​ : ของฟรี และดีมีในโลก'
-description: >-
-  From zero to full-stack web developer - ด้วยเนื้อหาที่มีคุณภาพ ,open source
-  และฟรี
+description: Web dev 101 ไปกับเนื้อหาที่มีคุณภาพ Free & Open source
 date: 2019-01-13T04:08:06.873Z
 thumbnail: /img/odin.png
 ---
