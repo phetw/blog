@@ -1,21 +1,19 @@
 import React, { memo } from 'react'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 import SEO from '../components/Seo'
-import Card from '../components/Card'
 import Layout from '../components/Layout'
 
-const Topic = styled.h1`
-  margin: 1.5rem 0;
-  color: ${({ theme }) =>
-    theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
-`
+import ProfileCard from '../components/ProfileCard'
 
-const Detail = styled.p`
-  color: ${({ theme }) =>
-    theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#949494'};
-`
+import BlogTitle from '../components/BlogTitle'
+import BlogContent from '../components/BlogContent'
+
+const Topic = styled(BlogTitle)``
+
+const Detail = styled(BlogContent)``
 
 const SocialWrapper = styled.section`
   display: flex;
@@ -23,10 +21,9 @@ const SocialWrapper = styled.section`
   justify-content: center;
   align-items: center;
   margin-bottom: 0.75rem;
-`
-
-const SocialLink = styled.a`
-  margin: 0 0.75rem;
+  a {
+    margin: 0 0.75rem;
+  }
 `
 
 const DotSeparator = styled.span`
@@ -40,7 +37,7 @@ const Index = memo(props => (
       subTitle="a software developer, reader, coffee lover and a lifelong learner."
       description="Get to know more about me"
     />
-    <Card>
+    <ProfileCard>
       <Img
         title="My profile picture"
         alt="My profile picture"
@@ -58,8 +55,7 @@ const Index = memo(props => (
       <Detail>
         Hello! <span role="img">🙏</span> My name is Wasuwat Limsuparhat, I am a
         Javascript developer and a web development enthusiast based in Bangkok,
-        Thailand. Nothing starts before a cup of black coffee{' '}
-        <span role="img">☕️</span>.
+        Thailand.
       </Detail>
       <Topic>What I do</Topic>
       <Detail>
@@ -77,31 +73,31 @@ const Index = memo(props => (
       </Detail>
       <Topic>Get in touch</Topic>
       <SocialWrapper>
-        <SocialLink
-          rel="noopener"
+        <a
+          rel="noopener noreferrer"
           target="_blank"
           href="https://github.com/rappad"
         >
           GitHub
-        </SocialLink>
+        </a>
         <DotSeparator>•</DotSeparator>
-        <SocialLink
-          rel="noopener"
+        <a
+          rel="noopener noreferrer"
           target="_blank"
           href="https://medium.com/@phet.w"
         >
           Medium
-        </SocialLink>
+        </a>
         <DotSeparator>•</DotSeparator>
-        <SocialLink
-          rel="noopener"
+        <a
+          rel="noopener noreferrer"
           target="_blank"
           href="https://www.linkedin.com/in/wasuwat-limsuparhat-a57b52137/"
         >
           LinkedIn
-        </SocialLink>
+        </a>
       </SocialWrapper>
-    </Card>
+    </ProfileCard>
   </Layout>
 ))
 
