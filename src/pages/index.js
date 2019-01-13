@@ -5,7 +5,10 @@ import styled from 'styled-components'
 import SEO from '../components/Seo'
 import Layout from '../components/Layout'
 
-const BlogItem = styled.article`
+import BlogTitle from '../components/BlogTitle'
+import BlogPublishDate from '../components/BlogPublishDate'
+
+const BlogCard = styled.article`
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -28,22 +31,10 @@ const BlogItem = styled.article`
   }
 `
 
-const BlogItemTitle = styled.h1`
-  margin: 1rem 0;
-  font-size: 1.35rem;
-`
-
-const BlogItemContentPreview = styled.p`
+const BlogContentPreview = styled.p`
   color: ${({ theme }) => (theme.main === 'light' ? '#616161' : '#c3c3c3')};
   font-size: 90%;
   margin-bottom: 1.2rem;
-`
-
-const BlogItemPublishDate = styled.p`
-  font-size: 12px;
-  color: ${({ theme }) => (theme.main === 'light' ? '#c3c3c3' : '#797979')};
-  margin: 0;
-  align-self: flex-end;
 `
 
 const Home = memo(({ data: { allMarkdownRemark } }) => (
@@ -52,15 +43,15 @@ const Home = memo(({ data: { allMarkdownRemark } }) => (
     {allMarkdownRemark.edges
       .filter(post => post.node.frontmatter.title.length > 0)
       .map(({ node: post }) => (
-        <BlogItem key={post.id} onClick={() => navigate(post.frontmatter.path)}>
-          <BlogItemTitle>
+        <BlogCard key={post.id} onClick={() => navigate(post.frontmatter.path)}>
+          <BlogTitle>
             <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-          </BlogItemTitle>
-          <BlogItemContentPreview>
+          </BlogTitle>
+          <BlogContentPreview>
             {post.frontmatter.description}
-          </BlogItemContentPreview>
-          <BlogItemPublishDate>{post.frontmatter.date}</BlogItemPublishDate>
-        </BlogItem>
+          </BlogContentPreview>
+          <BlogPublishDate>{post.frontmatter.date}</BlogPublishDate>
+        </BlogCard>
       ))}
   </Layout>
 ))
