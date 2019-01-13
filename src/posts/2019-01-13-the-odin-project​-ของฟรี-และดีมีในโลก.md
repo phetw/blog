@@ -11,7 +11,7 @@ thumbnail: /img/odin.png
 
 # The Odin Project
 
-[The Odin Project](https://www.theodinproject.com/dashboard) หรือ **TOP** ถูกก่อตั้งโดย Erik Trautman ในปี 2013 โดยมีจุดมุ่งหมายที่ต้องการจะสร้างบทเรียนที่เกี่ยวกับการ code ที่ _free ,open source_ และ _online_ สามารถเรียนได้ทุกที่ ทุกเวลา 
+[The Odin Project](https://www.theodinproject.com/dashboard) หรือ **TOP** ถูกก่อตั้งโดย Erik Trautman ในปี 2013 โดยมีจุดมุ่งหมายที่ต้องการจะสร้างบทเรียนที่เกี่ยวกับการ code ที่ **free** ,**open source** และ **online** สามารถเรียนได้ทุกที่ ทุกเวลา 
 
 ซึ่งผมชอบแนวคิดของโปเจคนี้มากๆ โดยทางทีมงานของ TOP เชื่อว่า การศึกษานั้นควรจะเป็นสิ่งที่ฟรี และเข้าถึงได้สำหรับทุกคน เพราะไม่ใช่ทุกคนที่จะมีโอกาส หรือเงินทุนพอที่จะไปเข้าเรียนมหาลัยดีๆ 
 
