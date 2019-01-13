@@ -20,10 +20,22 @@ export default class Layout extends PureComponent {
     super(props)
     this.state = {
       theme: {
-        main: localStorage.getItem('theme')
-          ? localStorage.getItem('theme')
-          : 'light',
+        main: 'light',
       },
+    }
+  }
+
+  componentDidMount() {
+    this.setDefaultTheme()
+  }
+
+  setDefaultTheme = () => {
+    if (window) {
+      this.setState({
+        theme: {
+          main: localStorage.getItem('theme'),
+        },
+      })
     }
   }
 
