@@ -49,17 +49,17 @@ const Index = memo(props => (
       />
       <Topic>Who Am I </Topic>
       <Detail>
-        Hello! <span role="img">🙏</span> My name is Wasuwat Limsuparhat, I am a
-        Javascript developer and a web development enthusiast based in Bangkok,
-        Thailand.
+        Hello! <span role="img">🙏</span> My name is Wasuwat (Phet) Limsuparhat,
+        I am a Javascript developer and a web development and web performance
+        optimization enthusiast based in Bangkok, Thailand.
       </Detail>
       <Topic>What I do</Topic>
       <Detail>
-        I love building a highly performant, beautiful and easy-to-use websites
-        and these are things that I always try to achieve when building one. In
-        past years, my works primarily focus on front-end web development with
-        React.js and few of Angular projects. I also do mini projects on Github
-        during my free time, check them out.
+        Over the past years, my works primarily focus on front-end web
+        development with React.js and few of Angular projects. However, I am
+        comfortable with any Javascript-based front-end and back-end frameworks.
+        I am the happiest man on earth if the software that I help building has
+        positive impacts on people's life.
       </Detail>
       <Topic>Other interests</Topic>
       <Detail>
