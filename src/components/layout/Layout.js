@@ -27,7 +27,6 @@ export default class Layout extends PureComponent {
 
   componentDidMount() {
     this.setDefaultTheme()
-    this.setThemeToLocalStorage()
   }
 
   setDefaultTheme = () => {
