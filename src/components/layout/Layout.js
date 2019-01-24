@@ -27,15 +27,25 @@ export default class Layout extends PureComponent {
 
   componentDidMount() {
     this.setDefaultTheme()
+    this.setThemeToLocalStorage()
   }
 
   setDefaultTheme = () => {
-    if (window) {
-      this.setState({
-        theme: {
-          main: localStorage.getItem('theme'),
+    if (
+      window &&
+      localStorage.getItem('theme') !== null &&
+      localStorage.getItem('theme') !== this.state.theme.main
+    ) {
+      this.setState(
+        {
+          theme: {
+            main: localStorage.getItem('theme'),
+          },
         },
-      })
+        () => {
+          this.setThemeToLocalStorage()
+        }
+      )
     }
   }
 
@@ -52,9 +62,13 @@ export default class Layout extends PureComponent {
               },
       }),
       () => {
-        localStorage.setItem('theme', this.state.theme.main)
+        this.setThemeToLocalStorage()
       }
     )
+  }
+
+  setThemeToLocalStorage = () => {
+    localStorage.setItem('theme', this.state.theme.main)
   }
 
   render() {
