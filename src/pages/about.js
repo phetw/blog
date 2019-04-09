@@ -103,7 +103,7 @@ export const query = graphql`
   query IndexQuery {
     file(relativePath: { eq: "me_2.jpg" }) {
       childImageSharp {
-        fixed(width: 200, height: 200) {
+        fixed(width: 140, height: 140) {
           ...GatsbyImageSharpFixed_withWebp
         }
       }
