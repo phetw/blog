@@ -3,7 +3,7 @@ module.exports = {
     title: `Wasuwat Limsuparhat`,
     author: `Wasuwat Limsuparhat`,
     description: `I write blogs to remind and keep track on what I ve learn.`,
-    siteUrl: `https://rappad.github.io/blog/`,
+    siteUrl: `https://wasuwat.me/blog/`,
   },
   pathPrefix: '/blog',
   plugins: [
@@ -43,7 +43,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              quality: 60,
+              quality: 75,
               maxWidth: 800,
               withWebp: true,
               wrapperStyle: 'margin-left:0!important;margin-right:0!important;',
