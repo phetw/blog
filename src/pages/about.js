@@ -38,6 +38,8 @@ const Index = memo(props => (
         title="My profile picture"
         alt="My profile picture"
         style={{
+          maxWidth: '140px',
+          maxHeight: '140px',
           margin: '0.75rem 0',
           borderRadius: '50%',
           boxShadow: '2px 2px 16px rgba(0, 0, 0, 0.25)',
