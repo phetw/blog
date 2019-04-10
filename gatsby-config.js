@@ -23,6 +23,7 @@ module.exports = {
         stripMetadata: true,
       },
     },
+    'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-typography`,
