@@ -3,41 +3,18 @@
   "description": "My personal blog - powered by Gatsby",
   "version": "1.1.0",
   "author": "Wasuwat Limsuparhat <wasuwat.se@gmail.com>",
-  "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.0.91",
-    "gatsby-image": "^2.0.26",
-    "gatsby-plugin-catch-links": "^2.0.9",
-    "gatsby-plugin-google-analytics": "^2.0.9",
-    "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-netlify-cms": "^3.0.9",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.4",
-    "gatsby-plugin-sharp": "^2.0.17",
-    "gatsby-plugin-styled-components": "^3.0.4",
-    "gatsby-plugin-typography": "^2.2.5",
-    "gatsby-remark-copy-linked-files": "^2.0.7",
-    "gatsby-remark-images": "^3.0.1",
-    "gatsby-remark-prismjs": "^3.2.0",
-    "gatsby-remark-relative-images": "^0.2.1",
-    "gatsby-source-filesystem": "^2.0.16",
-    "gatsby-transformer-remark": "^2.2.0",
-    "gatsby-transformer-sharp": "^2.1.10",
-    "netlify-cms": "^2.3.3",
-    "prismjs": "^1.15.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.13",
-    "styled-components": "^4.1.3",
-    "typography": "^0.16.17",
-    "typography-theme-grand-view": "^0.16.18"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.15.3"
-  },
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "npm run format",
+      "git add"
+    ]
+  },
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
@@ -45,5 +22,41 @@
     "build-prefix": "gatsby build --prefix-paths",
     "deploy": "yarn rm-cache && yarn format && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.3.21",
+    "gatsby-image": "^2.0.38",
+    "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-google-analytics": "^2.0.9",
+    "gatsby-plugin-netlify": "^2.0.6",
+    "gatsby-plugin-netlify-cms": "^3.0.9",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-typography": "^2.2.13",
+    "gatsby-remark-copy-linked-files": "^2.0.7",
+    "gatsby-remark-images": "^3.0.10",
+    "gatsby-remark-prismjs": "^3.2.8",
+    "gatsby-remark-relative-images": "^0.2.1",
+    "gatsby-source-filesystem": "^2.0.16",
+    "gatsby-transformer-remark": "^2.2.0",
+    "gatsby-transformer-sharp": "^2.1.18",
+    "netlify-cms": "^2.9.1",
+    "prismjs": "^1.15.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "styled-components": "^4.2.0",
+    "typography": "^0.16.19",
+    "typography-theme-grand-view": "^0.16.19"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.15.3"
   }
 }
