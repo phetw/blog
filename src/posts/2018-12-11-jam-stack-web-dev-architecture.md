@@ -1,7 +1,7 @@
 ---
 path: /introduction-to-jam-stack
-title: JAM stack - ทำเว็บยังไงให้ลื่นหัวแตก
-description: JAM stack คืออะไร ? ดียังไง ? ทำไมเราควรเลือกใช้ JAM stack
+title: JAM stack - my website is faster than yours.
+description: JAM stack คืออะไร ดียังไง และทำไมเราควรเลือกใช้ JAM stack
 date: 2018-12-10T20:08:53.312Z
 thumbnail: /img/jam.jpg
 ---
