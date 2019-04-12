@@ -9,9 +9,9 @@ thumbnail: /img/jam.jpg
 
 # JAM stack คืออะไร ?
 
-JAM stack คือแยมหรอ ? คล้ายๆกับ MEAN stack อันโด่งดังรึเปล่านะ ? 
+คล้ายๆกับ MEAN stack รึเปล่านะ ? 
 
-คำตอบคือ JAM จริงๆแล้วนั้นอ่านว่า _"แจม"_ ครับ ไม่ได้เกี่ยวกับแยม 55555 และ JAM stack นั้นไม่คล้ายกับ MEAN stack แต่อย่างใด เพราะ JAM stack ไม่ได้กำหนดหรือยิดติดกับ Technologies ที่เราจะใช้เหมือนกับ MEAN ที่ต้องประกอบไปด้วย MongoDB, Express, Angular และ Node
+JAM stack อ่านว่า "แจม" และ จริงๆแล้ว JAM stack นั้นไม่คล้ายกับ MEAN stack แต่อย่างใด เพราะ JAM stack ไม่ได้กำหนดหรือยิดติดกับ Technologies ที่เราจะใช้เหมือนกับ MEAN ที่ต้องประกอบไปด้วย MongoDB, Express, Angular และ Node 
 
 JAM stack คือ architecture ใหม่ของการทำ web application โดย JAM นั้นย่อมาจาก 3 คำนี้ครับ
 
