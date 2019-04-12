@@ -1,7 +1,7 @@
 ---
-path: /standardizing-angulars-code-base
+path: /standardizing-angular-code-base
 title: Standardizing Angular's code base
-description: Standardizing Angular's code base
+description: Path to cleaner code base and better Typescript utilization.
 date: 2019-04-10T04:04:27.277Z
 thumbnail: /img/ivan-bandura-757598-unsplash.jpg
 ---
