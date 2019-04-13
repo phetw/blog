@@ -28,7 +28,7 @@ module.exports = {
       options: {
         name: `wasuwat.me`,
         short_name: `wasuwat.me`,
-        start_url: `/`,
+        start_url: `/blog`,
         background_color: `#f4f6fa`,
         theme_color: `#d65947`,
         icon: 'static/favicon.png',
