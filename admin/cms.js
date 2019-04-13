@@ -104,7 +104,7 @@ var _interopRequireDefault = __webpack_require__(2);
 var _netlifyCms = _interopRequireDefault(__webpack_require__(3));
 
 /**
- * The stylesheet output from the module at `stylesPath` will be at `cms.css`.
+ * The stylesheet output from the modules at `modulePath` will be at `cms.css`.
  */
 _netlifyCms.default.registerPreviewStyle("cms.css");
 
@@ -114,7 +114,7 @@ _netlifyCms.default.registerPreviewStyle("cms.css");
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : {
-    default: obj
+    "default": obj
   };
 }
 
