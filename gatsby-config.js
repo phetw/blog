@@ -23,6 +23,18 @@ module.exports = {
         stripMetadata: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `wasuwat.me`,
+        short_name: `wasuwat.me`,
+        start_url: `/`,
+        background_color: `#f4f6fa`,
+        theme_color: `#d65947`,
+        icon: 'src/static/favicon.png',
+        display: `standalone`,
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
     {
