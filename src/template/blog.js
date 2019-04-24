@@ -12,12 +12,13 @@ import BlogFooter from '../components/blog/Footer'
 
 import favicon from '../../static/favicon.png'
 
+import theme from '../utils/color'
+
 const BlogContainer = styled.main`
   width: 100%;
   border-radius: 4px;
   max-width: 700px;
-  background-color: ${props =>
-    props.theme.main === 'light' ? 'white' : '#424242'};
+  background-color: ${props => theme(props.theme.main).postBg};
   box-shadow: 0 3px 10px rgba(25, 17, 34, 0.05);
   @media screen and (max-width: 600px) {
     padding: 1.75rem;

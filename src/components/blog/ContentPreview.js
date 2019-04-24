@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import theme from '../../utils/color'
 
 const ContentPreview = styled.p`
   font-size: 90%;
-  margin-bottom: 1.2rem;
-  color: ${({ theme }) => (theme.main === 'light' ? '#616161' : '#c3c3c3')};
+  margin-bottom: 1.75rem;
+  color: ${props => theme(props.theme.main).cardContent};
 `
 
 export default ContentPreview

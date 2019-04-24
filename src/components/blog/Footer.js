@@ -1,10 +1,15 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import theme from '../../utils/color'
 
 const ShareToSocialWrapper = styled.section`
   float: right;
-  color: ${({ theme }) => (theme.main === 'light' ? 'black' : '#c3c3c3')};
+  a {
+    font-weight: bold;
+    text-decoration: none;
+    color: ${props => theme(props.theme.main).menu};
+  }
 `
 
 const ShareToSocial = memo(({ title = '', path, siteUrl }) => (

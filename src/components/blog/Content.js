@@ -1,22 +1,24 @@
 import styled from 'styled-components'
+import theme from '../../utils/color'
 
 const BlogContent = styled.section`
-  color: ${props =>
-    props.theme.main === 'light' ? 'hsla(0,0%,0%,0.8)' : '#b9b9b9'};
-  h1 {
-    color: ${props =>
-      props.theme.main === 'light' ? 'hsla(0,0%,0%,0.875)' : '#c3c3c3'};
+  color: ${props => theme(props.theme.main).postContent};
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: ${props => theme(props.theme.main).postTitle};
   }
   blockquote {
     p {
-      color: ${props =>
-        props.theme.main === 'light' ? 'hsla(0,0%,0%,0.59)' : '#888888'};
+      color: ${props => theme(props.theme.main).postContentCode};
     }
   }
   p {
     code {
-      background: ${props =>
-        props.theme.main === 'light' ? '#f5f2f0' : '#c7c7c7'};
+      margin: 0 0.15rem;
+      color: ${props => theme(props.theme.main).postContentCode};
     }
   }
 `

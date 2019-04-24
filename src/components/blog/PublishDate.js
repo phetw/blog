@@ -1,8 +1,10 @@
 import styled from 'styled-components'
+import theme from '../../utils/color'
 
 const BlogPublishDate = styled.p`
-  font-size: 12px;
-  color: ${({ theme }) => (theme.main === 'light' ? '#c3c3c3' : '#797979')};
+  opacity: 0.65;
+  font-size: 10px;
+  color: ${props => theme(props.theme.main).publishDate};
   margin: 0;
   align-self: flex-end;
 `

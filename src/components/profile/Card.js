@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import theme from '../../utils/color'
 
 const ProfileCard = styled.section`
   display: flex;
@@ -8,8 +9,7 @@ const ProfileCard = styled.section`
   width: 100%;
   max-width: 560px;
   border-radius: 4px;
-  background-color: ${({ theme }) =>
-    theme.main === 'light' ? 'white' : '#424242'};
+  background-color: ${props => theme(props.theme.main).cardBg};
   box-shadow: 0 3px 10px rgba(25, 17, 34, 0.05);
   @media (max-width: 600px) {
     padding: 1.75rem;

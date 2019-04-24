@@ -11,7 +11,7 @@ import ContentPreview from '../components/blog/ContentPreview'
 
 const Home = memo(props => (
   <Layout>
-    <SEO description="I write blogs to remind and keep track on what I ve learn." />
+    <SEO description="Wasuwat's personal blog" />
     {props.data.allMarkdownRemark.edges
       .filter(post => post.node.frontmatter.title.length > 0)
       .map(({ node: post }) => (

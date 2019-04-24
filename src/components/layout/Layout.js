@@ -1,15 +1,15 @@
 import React, { PureComponent } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import theme from '../../utils/color'
 
 import Navbar from './Navbar'
 import ThemeToggler from './ThemeToggler'
 
 const LayoutWrapper = styled.main`
-  min-width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   padding: 1.25rem 1.25rem 3rem;
-  background-color: ${({ theme }) =>
-    theme.main === 'light' ? '#f4f6fa' : '#666'};
+  background-color: ${props => theme(props.theme.main).bodyBg};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +78,7 @@ export default class Layout extends PureComponent {
             theme={this.state.theme.main}
             onClick={this.toggleTheme}
           />
-          <Navbar />
+          <Navbar theme={this.state.theme.main} />
           {this.props.children}
         </LayoutWrapper>
       </ThemeProvider>
