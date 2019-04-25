@@ -15,6 +15,6 @@ thumbnail: /img/screen-shot-2018-12-15-at-02.52.34.jpg
 
 ส่วนแผนในปีหน้าผมตั้งใจว่าจะพยายาม contribute ให้กับโปรเจ็ค open source อื่นๆบน GitHub ให้มากขึ้น โดย contribution นั้นอาจจะรวมถึงการเข้าไป discuss บน issues ด้วย
 
-อย่าง Gatsby เอง เค้าก็มีโปรแกรม [free Gatsby swag](https://www.gatsbyjs.org/docs/contributor-swag/) ที่แจกของที่ระลึกเป็นการขอบคุณเมื่อใครก็ตาม contribute ให้กับ Gatsby _ผมว่าน่าสนใจดีนะ_
+อย่าง Gatsby เอง เค้าก็มีโปรแกรม [free Gatsby swag](https://www.gatsbyjs.org/docs/contributor-swag/) ที่แจกของที่ระลึก 1 อย่างเป็นการขอบคุณเมื่อใครก็ตาม contribute ให้กับ Gatsby น่าสนใจดีนะ
 
 ผมคิดว่า open source community นี่เป็นอะไรที่สำคัญมากต่อ self-taught developer หรือ developer หลายๆคนที่ต้องการศึกษา หาความรู้เพิ่มเติมนะ ฉะนั้น เรามา contribute to open source กันเถอะครับ ไม่ว่าจะเป็น project เล็กหรือใหญ่ จะเกี่ยวกับ code หรือไม่ก็ตามแต่
