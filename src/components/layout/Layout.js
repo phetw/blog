@@ -20,7 +20,7 @@ export default class Layout extends PureComponent {
     super(props)
     this.state = {
       theme: {
-        main: 'light',
+        main: 'dark',
       },
     }
   }
