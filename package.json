@@ -18,7 +18,6 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
-    "lh": "lighthousebot",
     "rm-cache": "rm -rf public && rm -rf .cache",
     "build-prefix": "gatsby build --prefix-paths",
     "deploy": "yarn rm-cache && yarn format && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'",
