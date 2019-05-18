@@ -5,6 +5,7 @@ import theme from '../../utils/color'
 
 const ShareToSocialWrapper = styled.section`
   float: right;
+  color: ${props => theme(props.theme.main).menu};
   a {
     font-weight: bold;
     text-decoration: none;
