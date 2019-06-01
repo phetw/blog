@@ -20,7 +20,7 @@
     "build": "gatsby build",
     "rm-cache": "rm -rf public && rm -rf .cache",
     "build-prefix": "gatsby build --prefix-paths",
-    "deploy": "yarn rm-cache && yarn format && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'"
+    "deploy": "yarn rm-cache && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
