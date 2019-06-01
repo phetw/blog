@@ -17,7 +17,7 @@ const SEO = memo(({ subTitle = '', description = '' }) => (
       const img = allImageSharp.edges[0].node.resize.src
       return (
         <Helmet
-          htmlAttributes={{ lang: 'th' }}
+          htmlAttributes={{ lang: 'en' }}
           title={`${title} ${subTitle ? ` - ${subTitle}` : ''}`}
           meta={[
             { name: 'author', content: author },
