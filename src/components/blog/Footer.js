@@ -23,15 +23,6 @@ const ShareToSocial = memo(({ title = '', path, siteUrl }) => (
       title="Share on Facebook"
     >
       Facebook
-    </a>{' '}
-    |{' '}
-    <a
-      href={`https://twitter.com/intent/tweet?url=https%3A%2F%2Frappad.github.io%2Fblog%2F&text=${title}`}
-      rel="noopener noreferrer"
-      target="_blank"
-      title="Share on Facebook"
-    >
-      Twitter
     </a>
   </ShareToSocialWrapper>
 ))
