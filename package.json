@@ -11,7 +11,7 @@
   },
   "lint-staged": {
     "*.{js,json,md}": [
-      "npm run format",
+      "prettier --write",
       "git add"
     ]
   },
@@ -20,8 +20,7 @@
     "build": "gatsby build",
     "rm-cache": "rm -rf public && rm -rf .cache",
     "build-prefix": "gatsby build --prefix-paths",
-    "deploy": "yarn rm-cache && yarn format && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'"
+    "deploy": "yarn rm-cache && yarn format && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
