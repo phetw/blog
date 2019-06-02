@@ -13,6 +13,10 @@ const PaginationContainer = styled.ul`
     text-decoration: none;
     color: ${props => `${theme(props.theme.main).menu}80`};
   }
+
+  li {
+    margin: 0 1rem;
+  }
 `
 
 export default PaginationContainer

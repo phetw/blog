@@ -7,7 +7,6 @@ import theme from '../../utils/color'
 import PaginationContainer from '../../components/blog/Pagination'
 
 const PageNumber = styled.li`
-  margin: 0 1rem;
   a {
     color: ${props =>
       props.currentPage
@@ -27,9 +26,11 @@ const Pagination = memo(props => {
   return (
     <PaginationContainer>
       {!isFirst && (
-        <Link to={prevPage} rel="prev">
-          ←
-        </Link>
+        <li>
+          <Link to={prevPage} rel="prev">
+            ←
+          </Link>
+        </li>
       )}
       {Array.from({ length: numPages }, (_, i) => (
         <PageNumber key={`page-${i + 1}`} currentPage={i + 1 === currentPage}>
@@ -37,9 +38,11 @@ const Pagination = memo(props => {
         </PageNumber>
       ))}
       {!isLast && (
-        <Link to={nextPage} rel="next">
-          →
-        </Link>
+        <li>
+          <Link to={nextPage} rel="next">
+            →
+          </Link>
+        </li>
       )}
     </PaginationContainer>
   )
