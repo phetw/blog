@@ -41,61 +41,63 @@ const VerticalLine = styled.hr`
     props.theme.main === 'light' ? 'hsla(0,0%,0%,0.2)' : '#c3c3c3'};
 `
 
-const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
-  <Fragment>
-    <Helmet
-      htmlAttributes={{ lang: 'en' }}
-      title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
-      meta={[
-        { name: 'author', content: site.siteMetadata.author },
-        {
-          name: 'description',
-          content: `${post.frontmatter.description}| ${post.excerpt} `,
-        },
-        { name: 'og:title', content: post.frontmatter.title },
-        {
-          name: 'og:description',
-          content: `${post.frontmatter.description} `,
-        },
-        {
-          name: 'og:image',
-          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
-        },
-        {
-          name: 'twitter:title',
-          content: post.frontmatter.title,
-        },
-        {
-          name: 'twitter:description',
-          content: post.frontmatter.description,
-        },
-        {
-          name: 'twitter:image',
-          content: post.frontmatter.thumbnail.childImageSharp.resize.src,
-        },
-      ]}
-      link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
-    />
-    <Layout>
-      <BlogContainer>
-        <BlogMetaData>
-          <BlogTitle>{post.frontmatter.title}</BlogTitle>
-          <BlogPublishDate>{post.frontmatter.date}</BlogPublishDate>
-        </BlogMetaData>
+const BlogTemplate = memo(
+  ({ location, data: { site, markdownRemark: post } }) => (
+    <Fragment>
+      <Helmet
+        htmlAttributes={{ lang: 'en' }}
+        title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
+        meta={[
+          { name: 'author', content: site.siteMetadata.author },
+          {
+            name: 'description',
+            content: `${post.frontmatter.description}| ${post.excerpt} `,
+          },
+          { name: 'og:title', content: post.frontmatter.title },
+          {
+            name: 'og:description',
+            content: `${post.frontmatter.description} `,
+          },
+          {
+            name: 'og:image',
+            content: post.frontmatter.thumbnail.childImageSharp.resize.src,
+          },
+          {
+            name: 'twitter:title',
+            content: post.frontmatter.title,
+          },
+          {
+            name: 'twitter:description',
+            content: post.frontmatter.description,
+          },
+          {
+            name: 'twitter:image',
+            content: post.frontmatter.thumbnail.childImageSharp.resize.src,
+          },
+        ]}
+        link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
+      />
+      <Layout>
+        <BlogContainer>
+          <BlogMetaData>
+            <BlogTitle>{post.frontmatter.title}</BlogTitle>
+            <BlogPublishDate>{post.frontmatter.date}</BlogPublishDate>
+          </BlogMetaData>
 
-        <VerticalLine />
-        <BlogContent dangerouslySetInnerHTML={{ __html: post.html }} />
-        <VerticalLine />
+          <VerticalLine />
+          <BlogContent dangerouslySetInnerHTML={{ __html: post.html }} />
+          <VerticalLine />
 
-        <BlogFooter
-          title={post.frontmatter.title}
-          path={window.location.href}
-          siteUrl={site.siteMetadata.siteUrl}
-        />
-      </BlogContainer>
-    </Layout>
-  </Fragment>
-))
+          <BlogFooter
+            title={post.frontmatter.title}
+            path={location.pathname.slice(1)}
+            siteUrl={site.siteMetadata.siteUrl}
+          />
+        </BlogContainer>
+      </Layout>
+    </Fragment>
+  )
+)
 
 export default BlogTemplate
 
