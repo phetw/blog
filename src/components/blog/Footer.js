@@ -15,7 +15,6 @@ const ShareToSocialWrapper = styled.section`
 
 const ShareToSocial = memo(({ title = '', path, siteUrl }) => (
   <ShareToSocialWrapper>
-    {console.log(siteUrl, path)}
     Share to :{' '}
     <a
       href={`https://facebook.com/sharer.php?u=${siteUrl}${path}`}
