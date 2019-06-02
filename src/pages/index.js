@@ -9,10 +9,10 @@ import PublishDate from '../components/blog/PublishDate'
 import Card from '../components/blog/Card'
 import ContentPreview from '../components/blog/ContentPreview'
 
-const Home = memo(props => (
+const Home = memo(({ data: { allMarkdownRemark } }) => (
   <Layout>
     <SEO description="Wasuwat's personal blog" />
-    {props.data.allMarkdownRemark.edges
+    {allMarkdownRemark.edges
       .filter(post => post.node.frontmatter.title.length > 0)
       .map(({ node: post }) => (
         <Card key={post.id} onClick={() => navigate(post.frontmatter.path)}>
