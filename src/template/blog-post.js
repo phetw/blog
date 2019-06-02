@@ -44,7 +44,7 @@ const VerticalLine = styled.hr`
 const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
   <Fragment>
     <Helmet
-      htmlAttributes={{ lang: 'th' }}
+      htmlAttributes={{ lang: 'en' }}
       title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
       meta={[
         { name: 'author', content: site.siteMetadata.author },
@@ -89,7 +89,7 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
 
         <BlogFooter
           title={post.frontmatter.title}
-          path={post.frontmatter.path}
+          path={window.location.href}
           siteUrl={site.siteMetadata.siteUrl}
         />
       </BlogContainer>
@@ -99,8 +99,8 @@ const BlogTemplate = memo(({ data: { site, markdownRemark: post } }) => (
 
 export default BlogTemplate
 
-export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+export const BlogPostBySlugQuery = graphql`
+  query BlogPostBySlugQuery($slug: String!) {
     site {
       siteMetadata {
         title
@@ -109,11 +109,10 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt(format: PLAIN, pruneLength: 300)
       frontmatter {
-        path
         title
         description
         date(formatString: "DD MMMM, YYYY")

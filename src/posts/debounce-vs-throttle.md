@@ -1,5 +1,4 @@
 ---
-path: /debounce-vs-throttle
 title: 'Debounce vs Throttle : ต่างกันอย่างไร'
 description: มาดูกันว่า debounce และ throttle คืออะไร ใช้ยังไง และมีประโยชน์ตอนไหนบ้าง
 date: 2019-01-06T12:45:48.991Z

@@ -4,18 +4,20 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/template/blog.js`)
 
   return graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
+        limit: 500
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
-              path
+              title
             }
           }
         }
@@ -26,10 +28,36 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
       createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
+        path: post.node.fields.slug,
+        component: path.resolve(`./src/template/blog-post.js`),
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    const postsPerPage = 3
+    const numPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/` : `/${i + 1}`,
+        component: path.resolve(`./src/template/blog-list.js`),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+        },
       })
     })
   })

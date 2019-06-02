@@ -1,10 +1,10 @@
 ---
-path: /interview
 title: Why you should go to an interview every once in a while
 description: 'A few good reasons to go for a job interview every once in a while. '
 date: 2018-12-25T02:58:11.637Z
 thumbnail: /img/nik-macmillan-280300-unsplash.jpg
 ---
+
 ![Interviewing](/img/nik-macmillan-280300-unsplash.jpg)
 
 I recently attend several interview sessions and thought of sharing things that I have discovered and learned throughout these interviews.

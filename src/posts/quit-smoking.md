@@ -1,5 +1,4 @@
 ---
-path: /i-quit-smoking
 title: Best achievement of 2018 - I quit smoking
 description: >-
   Story of why I start and I quit smoking after years of wasting money and
@@ -7,6 +6,7 @@ description: >-
 date: 2018-12-24T11:09:58.176Z
 thumbnail: /img/daniele-levis-pelusi-217494-unsplash.jpg
 ---
+
 ![Smokes](/img/daniele-levis-pelusi-217494-unsplash.jpg)
 
 I started smoking since the age of 16. I thought it was cool and relaxing. It was the time that you get to chat with all your friends, telling jokes, listen to each other's problems. I had convinced myself that it helps me concentrate and focus more. So yeah, I did smoke a lot during the time of exams and it somewhat helped. I could remember the picture of every page of the Physics book.

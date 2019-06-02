@@ -1,17 +1,17 @@
 ---
-path: /introduction-to-jam-stack
 title: JAM stack - my website is faster than yours.
 description: JAM stack คืออะไร ดียังไง และทำไมเราควรเลือกใช้ JAM stack
 date: 2018-12-10T20:08:53.312Z
 thumbnail: /img/jam.jpg
 ---
+
 ![Jam stack](/img/jam.jpg)
 
 # JAM stack คืออะไร ?
 
-คล้ายๆกับ MEAN stack รึเปล่านะ ? 
+คล้ายๆกับ MEAN stack รึเปล่านะ ?
 
-JAM stack อ่านว่า "แจม" และ จริงๆแล้ว JAM stack นั้นไม่คล้ายกับ MEAN stack แต่อย่างใด เพราะ JAM stack ไม่ได้กำหนดหรือยิดติดกับ Technologies ที่เราจะใช้เหมือนกับ MEAN ที่ต้องประกอบไปด้วย MongoDB, Express, Angular และ Node 
+JAM stack อ่านว่า "แจม" และ จริงๆแล้ว JAM stack นั้นไม่คล้ายกับ MEAN stack แต่อย่างใด เพราะ JAM stack ไม่ได้กำหนดหรือยิดติดกับ Technologies ที่เราจะใช้เหมือนกับ MEAN ที่ต้องประกอบไปด้วย MongoDB, Express, Angular และ Node
 
 JAM stack คือ architecture ใหม่ของการทำ web application โดย JAM นั้นย่อมาจาก 3 คำนี้ครับ
 
