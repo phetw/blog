@@ -45,7 +45,8 @@ const VerticalLine = styled.hr`
 const BlogPaginationContainer = styled(PaginationContainer)`
   margin: 0;
   width: 100%;
-  padding: 2rem 0;
+  max-width: 700px;
+  padding: 2rem 0.25rem;
   a {
     color: ${props => theme(props.theme.main).postContent};
   }
