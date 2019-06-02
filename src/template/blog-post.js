@@ -90,7 +90,7 @@ const BlogTemplate = memo(
 
           <BlogFooter
             title={post.frontmatter.title}
-            path={location.pathname.slice(1)}
+            path={location.pathname}
             siteUrl={site.siteMetadata.siteUrl}
           />
         </BlogContainer>
