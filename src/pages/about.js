@@ -55,7 +55,7 @@ const Index = memo(props => (
       />
       <Topic>Who Am I </Topic>
       <Detail>
-        Hello! <span role="img">🙏</span> My name is Wasuwat (Phet) Limsuparhat,
+        Hello! <span role="img">🙏</span> My name is Wasuwat Limsuparhat (Phet),
         I am a Javascript developer and a web development enthusiast based in
         Bangkok, Thailand.
       </Detail>
