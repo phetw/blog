@@ -70,8 +70,8 @@ const Index = memo(props => (
       <Topic>Other interests</Topic>
       <Detail>
         I like readings and learning things, but I tends to forget very easily
-        which is the reason why I started writing blogs. I play games and I do
-        love watching and playing football.
+        which is the primary reason why I started writing blogs. I play games
+        and I do love watching and playing football.
       </Detail>
       <br />
       <Topic>Get in touch</Topic>
@@ -82,14 +82,6 @@ const Index = memo(props => (
           href="https://github.com/rappad"
         >
           GitHub
-        </a>
-        <DotSeparator>•</DotSeparator>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://medium.com/@phet.w"
-        >
-          Medium
         </a>
         <DotSeparator>•</DotSeparator>
         <a
