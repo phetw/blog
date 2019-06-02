@@ -3,7 +3,7 @@ module.exports = {
     title: `Wasuwat's personal blog`,
     author: `Wasuwat Limsuparhat`,
     description: `I write blogs to remind and keep track on what I ve learn.`,
-    siteUrl: `https://wasuwat.me/blog/`,
+    siteUrl: `https://wasuwat.me`,
   },
   pathPrefix: '/blog',
   plugins: [
