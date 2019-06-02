@@ -1,7 +1,7 @@
 import React, { Fragment, memo } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout/Layout'
 
@@ -9,6 +9,7 @@ import Title from '../components/blog/Title'
 import BlogPublishDate from '../components/blog/PublishDate'
 import BlogContent from '../components/blog/Content'
 import BlogFooter from '../components/blog/Footer'
+import PaginationContainer from '../components/blog/Pagination'
 
 import favicon from '../../static/favicon.png'
 
@@ -41,8 +42,21 @@ const VerticalLine = styled.hr`
     props.theme.main === 'light' ? 'hsla(0,0%,0%,0.2)' : '#c3c3c3'};
 `
 
+const BlogPaginationContainer = styled(PaginationContainer)`
+  margin: 0;
+  width: 100%;
+  padding: 2rem 0;
+  a {
+    color: ${props => theme(props.theme.main).postContent};
+  }
+`
+
 const BlogTemplate = memo(
-  ({ location, data: { site, markdownRemark: post } }) => (
+  ({
+    data: { site, markdownRemark: post },
+    location,
+    pageContext: { next, previous },
+  }) => (
     <Fragment>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
@@ -94,6 +108,23 @@ const BlogTemplate = memo(
             siteUrl={site.siteMetadata.siteUrl}
           />
         </BlogContainer>
+
+        <BlogPaginationContainer>
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← Previous Post
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                Next Post →
+              </Link>
+            )}
+          </li>
+        </BlogPaginationContainer>
       </Layout>
     </Fragment>
   )

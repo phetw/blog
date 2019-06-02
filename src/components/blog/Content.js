@@ -15,6 +15,9 @@ const BlogContent = styled.section`
       color: ${props => theme(props.theme.main).postContentCode};
     }
   }
+  a {
+    color: ${props => theme(props.theme.main).postContent};
+  }
   p {
     code {
       margin: 0 0.15rem;
