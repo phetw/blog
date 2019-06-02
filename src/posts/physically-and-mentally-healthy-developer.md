@@ -1,5 +1,5 @@
 ---
-title: Physically & mentally healthy dev
+title: Physically & mentally healthy developer
 description: >-
   My personal routines for trying to become a physically and mentally healthy
   software developer
