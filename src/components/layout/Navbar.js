@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Link } from 'gatsby'
 
 import styled from 'styled-components'
@@ -26,20 +26,22 @@ const LinkActiveStyle = themeProps => {
   }
 }
 
-export default function Navbar(props) {
+const Navbar = memo(({ theme }) => {
   return (
     <NavbarWrapper>
-      <NavbarItem to="/" role="link" activeStyle={LinkActiveStyle(props.theme)}>
+      <NavbarItem to="/" role="link" activeStyle={LinkActiveStyle(theme)}>
         Blogs
       </NavbarItem>
       <NavbarItem
         to="/about"
         role="link"
         partiallyActive={true}
-        activeStyle={LinkActiveStyle(props.theme)}
+        activeStyle={LinkActiveStyle(theme)}
       >
         About
       </NavbarItem>
     </NavbarWrapper>
   )
-}
+})
+
+export default Navbar

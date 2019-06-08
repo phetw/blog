@@ -37,7 +37,7 @@ const ImageStyle = {
   boxShadow: '2px 2px 16px rgba(0, 0, 0, 0.25)',
 }
 
-const Index = memo(props => (
+const About = memo(props => (
   <Layout>
     <SEO
       subTitle="a software developer, reader, coffee lover and a lifelong learner."
@@ -96,10 +96,10 @@ const Index = memo(props => (
   </Layout>
 ))
 
-export default Index
+export default About
 
-export const query = graphql`
-  query IndexQuery {
+export const ProfileImageQuery = graphql`
+  query ProfileImageQuery {
     file(relativePath: { eq: "me_2.jpg" }) {
       childImageSharp {
         fixed(width: 200, height: 200) {

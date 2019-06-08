@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState, useEffect, memo } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '../../utils/color'
 
@@ -15,73 +15,47 @@ const LayoutWrapper = styled.main`
   align-items: center;
 `
 
-export default class Layout extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = {
-      theme: {
-        main: 'dark',
-      },
+const Layout = memo(({ children }) => {
+  const DARK = {
+    main: 'dark',
+  }
+  const LIGHT = {
+    main: 'light',
+  }
+  const [theme, setTheme] = useState(DARK)
+
+  useEffect(() => {
+    getThemeFromLocalStorage()
+  }, [])
+
+  const getThemeFromLocalStorage = () => {
+    if (window && localStorage.getItem('theme')) {
+      setTheme({
+        main: localStorage.getItem('theme'),
+      })
+    } else {
+      setThemeToLocalStorage(theme.main)
     }
   }
 
-  componentDidMount() {
-    this.setDefaultTheme()
+  const setThemeToLocalStorage = theme => {
+    localStorage.setItem('theme', theme)
   }
 
-  setDefaultTheme = () => {
-    if (
-      window &&
-      localStorage.getItem('theme') !== null &&
-      localStorage.getItem('theme') !== this.state.theme.main
-    ) {
-      this.setState(
-        {
-          theme: {
-            main: localStorage.getItem('theme'),
-          },
-        },
-        () => {
-          this.setThemeToLocalStorage()
-        }
-      )
-    }
+  const toggleTheme = () => {
+    setTheme(theme.main === LIGHT.main ? DARK : LIGHT)
+    setThemeToLocalStorage(theme.main === LIGHT.main ? DARK.main : LIGHT.main)
   }
 
-  toggleTheme = () => {
-    this.setState(
-      ({ theme: prevTheme }) => ({
-        theme:
-          prevTheme.main === 'light'
-            ? {
-                main: 'dark',
-              }
-            : {
-                main: 'light',
-              },
-      }),
-      () => {
-        this.setThemeToLocalStorage()
-      }
-    )
-  }
+  return (
+    <ThemeProvider theme={theme}>
+      <LayoutWrapper>
+        <ThemeToggler theme={theme.main} onClick={() => toggleTheme()} />
+        <Navbar theme={theme.main} />
+        {children}
+      </LayoutWrapper>
+    </ThemeProvider>
+  )
+})
 
-  setThemeToLocalStorage = () => {
-    localStorage.setItem('theme', this.state.theme.main)
-  }
-
-  render() {
-    return (
-      <ThemeProvider theme={this.state.theme}>
-        <LayoutWrapper>
-          <ThemeToggler
-            theme={this.state.theme.main}
-            onClick={this.toggleTheme}
-          />
-          <Navbar theme={this.state.theme.main} />
-          {this.props.children}
-        </LayoutWrapper>
-      </ThemeProvider>
-    )
-  }
-}
+export default Layout
