@@ -39,10 +39,7 @@ const ImageStyle = {
 
 const About = memo(props => (
   <Layout>
-    <SEO
-      subTitle="a software developer, reader, coffee lover and a lifelong learner."
-      description="Get to know more about me"
-    />
+    <SEO description={props.data.site.siteMetadata.description} />
     <Card>
       <Img
         title="My profile picture"
@@ -100,6 +97,11 @@ export default About
 
 export const ProfileImageQuery = graphql`
   query ProfileImageQuery {
+    site {
+      siteMetadata {
+        description
+      }
+    }
     file(relativePath: { eq: "me_2.jpg" }) {
       childImageSharp {
         fixed(width: 200, height: 200) {

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Wasuwat Limsuparhat's personal blog`,
+    description: `This is Wasuwat Limsuparhat's personal blog. Wasuwat is a software developer based in Bangkok, Thailand. He is a frontend developer and he likes building a blazingly fast and beautiful websites.`,
     author: `Wasuwat Limsuparhat`,
-    description: `I write blogs to remind and keep track on what I ve learn.`,
     siteUrl: `https://wasuwat.me`,
   },
   pathPrefix: '/blog',

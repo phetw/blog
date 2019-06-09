@@ -16,8 +16,7 @@ const BlogList = memo(props => {
 
   return (
     <Layout>
-      <SEO description={props.data.site.siteMetadata.title} />
-
+      <SEO description={props.data.site.siteMetadata.description} />
       {posts.map(({ node: post }) => (
         <Card key={post.id} onClick={() => navigate(post.fields.slug)}>
           <Title>
@@ -38,7 +37,7 @@ export const BlogListQuery = graphql`
   query BlogListQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
-        title
+        description
       }
     }
     allMarkdownRemark(
