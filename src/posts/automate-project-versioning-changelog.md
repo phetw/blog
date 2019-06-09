@@ -6,19 +6,19 @@ thumbnail: /img/nathan-anderson-388399-unsplash.jpg
 ---
 ![Changes are inevitable](/img/nathan-anderson-388399-unsplash.jpg "Changes are inevitable")
 
-Recently, I was assigned to plan for the project versioning and change log on an Angular project. In this article, I will shared my solution and I hope that this can guide you more or less.
+Recently, I was assigned to plan for the project versioning and change log on an Angular project. I found a suitable solution and I would like to share it to anyone who is looking for the similar solution.
 
 ## Why versioning and CHANGELOG ?
 
-Simple. Changes are inevitable in software development and documentation on changes is a must, especially you are building public packages or APIs that a lot of projects depends on. 
+Changes are inevitable in software development and documentation on changes is a must, especially when you are building public packages or APIs that a lot of projects depends on. 
 
-## It's hard and boring
+## But it's hard and boring
 
 Yes, I definitely agreed to that. It's a repetitive work, but we are a programmer we write code to solve problems. So, why not automate it ?
 
 ## Versioning standard
 
-[Semantic versioning](https://semver.org/) is the basic versioning standard for most of the packages or projects, and in this article I will follow this standard. 
+[Semantic versioning](https://semver.org/) is the basic versioning standard for most of the packages or projects, and through this article I will follow this standard. 
 
 ## When to bump version ?
 
@@ -28,7 +28,7 @@ Yes, I definitely agreed to that. It's a repetitive work, but we are a programme
 
 ## How to automate ?
 
-By following a commit pattern called, [conventional-commit](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) which is also being used by the Angular [repository](https://github.com/angular/angular). This will allow the tool called [standard-version](https://github.com/conventional-changelog/standard-version) to specify the differences between features, bug fixes and breaking changes and bump version automatically according to semantic versioning.
+By following a commit pattern called, [conventional-commit](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) which is also being used by the official Angular [repository](https://github.com/angular/angular). This will allow the tool called [standard-version](https://github.com/conventional-changelog/standard-version) to specify the differences between features, bug fixes and breaking changes and bump version automatically according to semantic versioning. Try tinkering the configuration to suit your needs, it does offer a fair amount of customization.
 
 Setup is simple. 
 
