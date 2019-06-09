@@ -1,5 +1,5 @@
 ---
-title: Automate project versioning & CHANGELOG
+title: Automate versioning & CHANGELOG
 description: Automate project versioning & CHANGELOG without tears
 date: 2019-06-04T04:51:42.715Z
 thumbnail: /img/nathan-anderson-388399-unsplash.jpg
