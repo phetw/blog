@@ -22,7 +22,7 @@ module.exports = {
         sitemap: 'https://wasuwat.me/blog/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
