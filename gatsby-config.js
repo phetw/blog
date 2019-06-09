@@ -37,7 +37,6 @@ module.exports = {
         display: `standalone`,
       },
     },
-    'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
     {
       resolve: `gatsby-plugin-typography`,
