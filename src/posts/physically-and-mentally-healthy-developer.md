@@ -8,13 +8,15 @@ thumbnail: /img/correct-sitting-posture-diagram-at-a-computer-desk.jpg
 ---
 Majority of the software developers sit in front of computer monitor for roughly 7-8 hours or more per day depending on the work place. I think most of us will probably know that it is not healthy and considered to be a bad practice to sit continuously for a long time. It can cause a lot of health issues like back pain, neck strain or even office syndrome.
 
+I've had experience with these symptoms and I would like to share my tips to tackle this problem.
+
 ## **Sit correctly.**
 
 As mentioned earlier, if the large portion of the time at office is sitting, sit well. There are plenty of references regarding correct sitting position, but I always refer to this one. Plus, this will also help to maintain a good your posture while standing or walking. Finally, if possible get a chair with good ergonomic.
 
 ![Sitting position](/img/correct-sitting-posture-diagram-at-a-computer-desk.jpg "Sitting position")
 
-## **Take a break.** 
+## **Take a break.**
 
 Just get up. I understand that at times with programming work need a lot of concentration and when I concentrate on something, I tend to forget to do another. I always try to remind myself as much as possible, or maybe set a small alarm or reminder to get up every hour or something. 
 
