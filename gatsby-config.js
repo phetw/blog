@@ -15,7 +15,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://wasuwat.me',
+        sitemap: 'https://wasuwat.me/blog/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
