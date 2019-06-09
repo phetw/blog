@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://wasuwat.me/sitemap.xml
+Sitemap: https://wasuwat.me/blog/sitemap.xml
 Host: https://wasuwat.me
