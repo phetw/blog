@@ -33,11 +33,7 @@ By following a commit pattern called, [conventional-commit](https://www.conventi
 Setup is simple. 
 
 1. `npm i --save-dev standard-version`
-2. add script `{`
-      `"scripts": {`
-      `"release": "standard-version"`
-      `}`
-      `}`
+2. add script  `"scripts": { "release": "standard-version" }`
 3. run `npm run release -- --first-release` to init CHANGELOG.md
 4. Subsequently run `npm run release` after each release
 
