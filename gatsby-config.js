@@ -14,6 +14,8 @@ module.exports = {
         path: `${__dirname}/static/img`,
       },
     },
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
