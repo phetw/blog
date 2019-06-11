@@ -4,11 +4,11 @@ import grandViewTheme from 'typography-theme-grand-view'
 grandViewTheme.googleFonts = [
   {
     name: 'Montserrat',
-    styles: ['500', '700'],
+    styles: ['500', '700&display=swap'],
   },
   {
     name: 'Kanit',
-    styles: ['300', '700'],
+    styles: ['300', '700&display=swap'],
   },
 ]
 grandViewTheme.headerFontFamily = ['Montserrat ', 'Kanit']
