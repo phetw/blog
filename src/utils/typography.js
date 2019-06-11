@@ -4,7 +4,7 @@ import grandViewTheme from 'typography-theme-grand-view'
 grandViewTheme.googleFonts = [
   {
     name: 'Montserrat',
-    styles: ['500', '700&display=swap'],
+    styles: ['500', '700'],
   },
   {
     name: 'Kanit',
