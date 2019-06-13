@@ -46,7 +46,7 @@ const Navbar = memo(({ theme }) => {
 })
 
 Navbar.propTypes = {
-  theme: PropTypes.string.isRequired,
+  theme: PropTypes.string,
 }
 
 export default Navbar

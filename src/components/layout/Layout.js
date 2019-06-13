@@ -23,7 +23,7 @@ const Theme = {
 
 export default class Layout extends PureComponent {
   state = {
-    theme: Theme.DARK,
+    theme: null,
   }
 
   componentDidMount() {
