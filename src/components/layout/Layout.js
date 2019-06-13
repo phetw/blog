@@ -28,7 +28,7 @@ export default class Layout extends PureComponent {
     const windowGlobal = typeof window !== 'undefined' && window
     this.state = {
       theme: windowGlobal
-        ? windowGlobal.localStorage.getItem('theme')
+        ? localStorage.getItem('theme')
         : Theme.DARK,
     }
   }
