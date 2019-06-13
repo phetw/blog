@@ -9,7 +9,6 @@ const LayoutWrapper = styled.main`
   max-width: 100vw;
   min-height: 100vh;
   padding: 3rem 1.25rem;
-  transition: background-color 200ms ease;
   will-change: background-color;
   background-color: ${props => theme(props.theme.main).bodyBg};
   display: flex;
@@ -23,42 +22,16 @@ const Theme = {
 }
 
 export default class Layout extends PureComponent {
-  constructor(props) {
-    super(props)
-
-    let defaultTheme = Theme.DARK
-
-    if (typeof window !== 'undefined') {
-      defaultTheme = localStorage.getItem('theme')
-    }
-
-    this.state = {
-      theme: defaultTheme,
-    }
+  state = {
+    theme: Theme.DARK,
   }
 
   componentDidMount() {
-    this.setDefaultTheme()
-  }
+    this.setState({ theme: window.__theme })
 
-  setDefaultTheme = () => {
-    if (
-      localStorage.getItem('theme') &&
-      localStorage.getItem('theme') !== this.state.theme
-    ) {
-      this.setState(
-        {
-          theme: localStorage.getItem('theme'),
-        },
-        () => {
-          this.setThemeToLocalStorage(this.state.theme)
-        }
-      )
+    window.__onThemeChange = () => {
+      this.setState({ theme: window.__theme })
     }
-  }
-
-  setThemeToLocalStorage = theme => {
-    localStorage.setItem('theme', theme)
   }
 
   toggleTheme = () => {
@@ -67,7 +40,7 @@ export default class Layout extends PureComponent {
         theme: prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT,
       }),
       () => {
-        this.setThemeToLocalStorage(this.state.theme)
+        window.__setPreferredTheme(this.state.theme)
       }
     )
   }
@@ -83,7 +56,10 @@ export default class Layout extends PureComponent {
         }}
       >
         <>
-          <ThemeToggler theme={theme} onClick={() => this.toggleTheme()} />
+          <ThemeToggler
+            checked={theme === 'light'}
+            onClick={() => this.toggleTheme()}
+          />
           <LayoutWrapper>
             <Navbar theme={theme} />
             {children}
