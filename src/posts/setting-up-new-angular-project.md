@@ -17,7 +17,7 @@ Furthermore, `stylelint` can also be apply at them same way.
 
 ## Setting up code formatter
 
-Different team members may use a different code formatter in their IDE or text editor, a package name prettier can be use to format the code according to the configured options.
+Different team members may use a different code formatter in their IDE or text editor, a package name `prettier` can be use to consistently format the code according to the configured options in `.prettierrc.json` file.
 
 ## Setting up git hook
 
@@ -25,8 +25,8 @@ To enforce linter's rules and prevent bad code from committing to repository, pa
 
 ## Decide modules structure
 
-I always go with typical core/shared/feature modules option when the project is small to medium scale. It's far more than enough for most of the use cases. Then finally, think about your application business requirement and decide modules/routings accordingly. Always try to decide a reusable components and always **KISS** (keep it simple stupid).
+I always go with typical core/shared/feature modules option when the project is small to medium scale. It's far more than enough for most of the use cases. Then finally, think about your application business requirement and decide modules/routings accordingly. Always try to decide a reusable components and always **DRY** _(don't repeat yourself)_ and **KISS** _(keep it simple stupid)_.
 
-## Final
+## Code style
 
-Setup team's standards. I usually show the juniors the [Angular's style guide](https://angular.io/guide/styleguide). And maybe things like Observable should end with `$`. Discuss and put up a documentation somewhere.
+Setup team's code style. I usually refers to the official [Angular's style guide](https://angular.io/guide/styleguide), but there are plenty of things that aren't mentioned like Observable should end with `$`. Discuss and put up a documentation somewhere, so that they can be reuse throughout the organization.
