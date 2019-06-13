@@ -25,9 +25,10 @@ const Theme = {
 export default class Layout extends PureComponent {
   constructor(props) {
     super(props)
+    const windowGlobal = typeof window !== 'undefined' && window
     this.state = {
-      theme: isLocalStorageAvailable
-        ? localStorage.getItem('theme')
+      theme: windowGlobal
+        ? windowGlobal.localStorage.getItem('theme')
         : Theme.DARK,
     }
   }
