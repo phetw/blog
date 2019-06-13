@@ -3,6 +3,7 @@ import theme from '../../utils/color'
 
 const BlogContent = styled.section`
   color: ${props => theme(props.theme.main).postContent};
+  max-width: 100%;
   h1,
   h2,
   h3,
