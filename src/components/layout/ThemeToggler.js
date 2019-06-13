@@ -49,7 +49,12 @@ const SwitchButton = styled.div`
 const ThemeToggler = memo(({ theme, onClick }) => (
   <SwitchContainer>
     <Switch>
-      <input type="checkbox" checked={theme === 'light'} onClick={onClick} />{' '}
+      <input
+        type="checkbox"
+        checked={theme === 'light'}
+        readOnly={true}
+        onClick={onClick}
+      />{' '}
       <SwitchButton />
     </Switch>
   </SwitchContainer>

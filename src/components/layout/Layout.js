@@ -25,7 +25,7 @@ export default class Layout extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      theme: Theme.DARK,
+      theme: window.localStorage.getItem('theme'),
     }
   }
 
@@ -34,10 +34,7 @@ export default class Layout extends PureComponent {
   }
 
   setDefaultTheme = () => {
-    if (
-      window &&
-      localStorage.getItem('theme') !== this.state.theme
-    ) {
+    if (localStorage.getItem('theme') !== this.state.theme) {
       this.setState(
         {
           theme: localStorage.getItem('theme'),
