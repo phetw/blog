@@ -52,8 +52,8 @@ const ThemeToggler = memo(({ theme, onClick }) => (
       <input
         type="checkbox"
         checked={theme === 'light'}
-        readOnly={true}
         onClick={onClick}
+        readOnly
       />{' '}
       <SwitchButton />
     </Switch>

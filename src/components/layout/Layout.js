@@ -9,6 +9,7 @@ const LayoutWrapper = styled.main`
   max-width: 100vw;
   min-height: 100vh;
   padding: 3rem 1.25rem;
+  transition: background-color 200ms ease;
   will-change: background-color;
   background-color: ${props => theme(props.theme.main).bodyBg};
   display: flex;
@@ -24,8 +25,15 @@ const Theme = {
 export default class Layout extends PureComponent {
   constructor(props) {
     super(props)
+
+    let defaultTheme = Theme.DARK
+
+    if (typeof window !== 'undefined') {
+      defaultTheme = localStorage.getItem('theme')
+    }
+
     this.state = {
-      theme: window.localStorage.getItem('theme'),
+      theme: defaultTheme,
     }
   }
 
@@ -34,7 +42,10 @@ export default class Layout extends PureComponent {
   }
 
   setDefaultTheme = () => {
-    if (localStorage.getItem('theme') !== this.state.theme) {
+    if (
+      localStorage.getItem('theme') &&
+      localStorage.getItem('theme') !== this.state.theme
+    ) {
       this.setState(
         {
           theme: localStorage.getItem('theme'),
