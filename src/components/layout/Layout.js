@@ -37,7 +37,7 @@ export default class Layout extends PureComponent {
     if (
       window &&
       localStorage.getItem('theme') !== null &&
-      localStorage.getItem('theme') !== this.state.theme.main
+      localStorage.getItem('theme') !== this.state.theme
     ) {
       this.setState(
         {
