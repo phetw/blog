@@ -29,4 +29,6 @@ I always go with typical core/shared/feature modules option when the project is 
 
 ## Code style
 
-Setup team's code style. I usually refers to the official [Angular's style guide](https://angular.io/guide/styleguide), but there are plenty of things that aren't mentioned like Observable should end with `$`. Discuss and put up a documentation somewhere, so that they can be reuse throughout the organization.
+Setup team's code style. I usually refers to the official [Angular's style guide](https://angular.io/guide/styleguide), but there are plenty of things that aren't mentioned like Observable should end with `$`. Brainstorm and create a short team's style guide in wiki, so that they can be shared between the team members or even throughout the organization.
+
+Remember that these are meant to improve code quality and long-term productivity. If it doesn't for your team, don't bother doing it.
