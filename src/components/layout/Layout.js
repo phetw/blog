@@ -26,8 +26,11 @@ export default class Layout extends PureComponent {
   constructor(props) {
     super(props)
 
-    const isLocalStorageAvailable =
-      window && localStorage && localStorage.getItem('theme')
+    let isLocalStorageAvailable = false
+    if(window && localStorage && localStorage.getItem('theme')){
+      isLocalStorageAvailable = true
+    }
+    
     this.state = {
       theme: isLocalStorageAvailable
         ? localStorage.getItem('theme')
