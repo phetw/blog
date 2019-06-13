@@ -39,4 +39,6 @@ Setup is simple.
 
 [Example of generated CHANGELOG.md](https://github.com/conventional-changelog/standard-version/blob/master/CHANGELOG.md)
 
+---
+
 There is also an alternative tool called [semantic-release](https://github.com/semantic-release/semantic-release). It's a fully automated version management and package publishing. Personally, I prefer the one I previously mentioned as it gives more controls over bumping version.
