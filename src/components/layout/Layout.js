@@ -8,8 +8,9 @@ import ThemeToggler from './ThemeToggler'
 const LayoutWrapper = styled.main`
   max-width: 100vw;
   min-height: 100vh;
-  padding: 1.25rem 1.25rem 3rem;
-  transition: background-color 300ms ease;
+  padding: 3rem 1.25rem;
+  will-change: background-color;
+  transition: background-color 200ms ease;
   background-color: ${props => theme(props.theme.main).bodyBg};
   display: flex;
   flex-direction: column;
@@ -56,11 +57,13 @@ export default class Layout extends PureComponent {
           main: theme,
         }}
       >
-        <LayoutWrapper>
+        <>
           <ThemeToggler theme={theme} onClick={() => this.toggleTheme()} />
-          <Navbar theme={theme} />
-          {children}
-        </LayoutWrapper>
+          <LayoutWrapper>
+            <Navbar theme={theme} />
+            {children}
+          </LayoutWrapper>
+        </>
       </ThemeProvider>
     )
   }

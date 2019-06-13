@@ -16,6 +16,7 @@ const BlogCard = styled.article`
   padding-bottom: 1.25rem;
   background-color: ${props => theme(props.theme.main).cardBg};
   box-shadow: 0 3px 10px rgba(25, 17, 34, 0.05);
+  will-change: transform;
   transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 450ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
