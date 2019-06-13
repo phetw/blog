@@ -25,8 +25,11 @@ const Theme = {
 export default class Layout extends PureComponent {
   constructor(props) {
     super(props)
+
+    const isLocalStorageAvailable =
+      window && localStorage && localStorage.getItem('theme')
     this.state = {
-      theme: localStorage.getItem('theme')
+      theme: isLocalStorageAvailable
         ? localStorage.getItem('theme')
         : Theme.DARK,
     }
