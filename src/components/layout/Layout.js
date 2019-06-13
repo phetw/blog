@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from 'react'
+import React, { PureComponent } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import theme from '../../utils/color'
 
@@ -9,53 +9,59 @@ const LayoutWrapper = styled.main`
   max-width: 100vw;
   min-height: 100vh;
   padding: 1.25rem 1.25rem 3rem;
+  transition: background-color 300ms ease;
   background-color: ${props => theme(props.theme.main).bodyBg};
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-const Layout = memo(({ children }) => {
-  const DARK = {
-    main: 'dark',
-  }
-  const LIGHT = {
-    main: 'light',
-  }
-  const [theme, setTheme] = useState(DARK)
+const Theme = {
+  DARK: 'dark',
+  LIGHT: 'light',
+}
 
-  useEffect(() => {
-    getThemeFromLocalStorage()
-  }, [])
-
-  const getThemeFromLocalStorage = () => {
-    if (window && localStorage.getItem('theme')) {
-      setTheme({
-        main: localStorage.getItem('theme'),
-      })
-    } else {
-      setThemeToLocalStorage(theme.main)
+export default class Layout extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      theme: localStorage.getItem('theme')
+        ? localStorage.getItem('theme')
+        : Theme.DARK,
     }
   }
 
-  const setThemeToLocalStorage = theme => {
+  setThemeToLocalStorage = theme => {
     localStorage.setItem('theme', theme)
   }
 
-  const toggleTheme = () => {
-    setTheme(theme.main === LIGHT.main ? DARK : LIGHT)
-    setThemeToLocalStorage(theme.main === LIGHT.main ? DARK.main : LIGHT.main)
+  toggleTheme = () => {
+    this.setState(
+      ({ theme: prevTheme }) => ({
+        theme: prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT,
+      }),
+      () => {
+        this.setThemeToLocalStorage(this.state.theme)
+      }
+    )
   }
 
-  return (
-    <ThemeProvider theme={theme}>
-      <LayoutWrapper>
-        <ThemeToggler theme={theme.main} onClick={() => toggleTheme()} />
-        <Navbar theme={theme.main} />
-        {children}
-      </LayoutWrapper>
-    </ThemeProvider>
-  )
-})
+  render() {
+    const { theme } = this.state
+    const { children } = this.props
 
-export default Layout
+    return (
+      <ThemeProvider
+        theme={{
+          main: theme,
+        }}
+      >
+        <LayoutWrapper>
+          <ThemeToggler theme={theme} onClick={() => this.toggleTheme()} />
+          <Navbar theme={theme} />
+          {children}
+        </LayoutWrapper>
+      </ThemeProvider>
+    )
+  }
+}
