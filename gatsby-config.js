@@ -18,10 +18,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://wasuwat.me',
+        host: 'https://wasuwat.me/blog',
         sitemap: 'https://wasuwat.me/blog/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
