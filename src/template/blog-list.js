@@ -23,7 +23,9 @@ const BlogList = memo(props => {
             <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
           </Title>
           <ContentPreview>{post.frontmatter.description}</ContentPreview>
-          <PublishDate>{post.frontmatter.date}</PublishDate>
+          <PublishDate>
+            {post.frontmatter.date} • 📚 {post.timeToRead} min read
+          </PublishDate>
         </Card>
       ))}
       <Pagination numPages={numPages} currentPage={currentPage} />
@@ -48,7 +50,7 @@ export const BlogListQuery = graphql`
       edges {
         node {
           id
-          excerpt(format: PLAIN)
+          timeToRead
           fields {
             slug
           }
