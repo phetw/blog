@@ -4,8 +4,7 @@ description: My personal notes when setting up a new small to medium scale Angul
 date: 2019-06-13T04:51:42.715Z
 thumbnail: /img/jeff-sheldon-3220-unsplash.jpg
 ---
-
-![Planning](/img/jeff-sheldon-3220-unsplash.jpg 'Planning')
+![Planning](/img/jeff-sheldon-3220-unsplash.jpg "Planning")
 
 ## Ng new
 
@@ -26,6 +25,8 @@ To enforce linter's rules and prevent bad code from committing to repository, pa
 
 ## Decide modules structure
 
-I always go with typical core/shared/feature modules option when the project is small to medium scale. It's far more than enough for most of the use cases. Then finally, think about your application business requirement and decide modules/routings accordingly. Always try to decide a reusable components and always **KISS** (keep it simple stupid)
-Final
+I always go with typical core/shared/feature modules option when the project is small to medium scale. It's far more than enough for most of the use cases. Then finally, think about your application business requirement and decide modules/routings accordingly. Always try to decide a reusable components and always **KISS** (keep it simple stupid).
+
+## Final
+
 Setup team's standards. I usually show the juniors the [Angular's style guide](https://angular.io/guide/styleguide). And maybe things like Observable should end with `$`. Discuss and put up a documentation somewhere.
