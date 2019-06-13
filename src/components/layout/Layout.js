@@ -46,7 +46,7 @@ export default class Layout extends PureComponent {
           },
         },
         () => {
-          this.setThemeToLocalStorage()
+          this.setThemeToLocalStorage(localStorage.getItem('theme'))
         }
       )
     }
