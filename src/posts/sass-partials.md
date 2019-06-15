@@ -22,6 +22,6 @@ In terms of SASS, partial means having an _underscore_ or _ _prefix_ at the file
 
 ## @import vs @import partial
 
-**CSS's @import** works by creating **an extra HTTP request** to the importing files which theoretically makes the website slower. On the other hand, **SASS's @Impor**t and partial files will not. By importing partial SASS files, the imported files will bundle with the importing SASS files and finally will form a single CSS which will not make any extra HTTP requests.
+**CSS's @import** works by creating **an extra HTTP request** to the importing files which theoretically makes the website slower. On the other hand, **SASS's @Import** and partial files will not. By importing partial SASS files, the imported files will bundle with the importing SASS files and finally will form a single CSS which will not make any extra HTTP requests.
 
 _Happy coding !_
