@@ -10,6 +10,7 @@ const LayoutWrapper = styled.main`
   min-height: 100vh;
   padding: 3rem 1.25rem;
   will-change: background-color;
+  transition: background-color 300ms ease;
   background-color: ${props => theme(props.theme.main).bodyBg};
   display: flex;
   flex-direction: column;
@@ -50,22 +51,24 @@ export default class Layout extends PureComponent {
     const { children } = this.props
 
     return (
-      <ThemeProvider
-        theme={{
-          main: theme,
-        }}
-      >
-        <>
-          <ThemeToggler
-            checked={theme === 'light'}
-            onClick={() => this.toggleTheme()}
-          />
-          <LayoutWrapper>
-            <Navbar theme={theme} />
-            {children}
-          </LayoutWrapper>
-        </>
-      </ThemeProvider>
+      theme && (
+        <ThemeProvider
+          theme={{
+            main: theme,
+          }}
+        >
+          <>
+            <ThemeToggler
+              checked={theme === 'light'}
+              onClick={() => this.toggleTheme()}
+            />
+            <LayoutWrapper>
+              <Navbar theme={theme} />
+              {children}
+            </LayoutWrapper>
+          </>
+        </ThemeProvider>
+      )
     )
   }
 }

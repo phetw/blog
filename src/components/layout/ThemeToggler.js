@@ -24,12 +24,17 @@ const Switch = styled.label`
   height: 1em;
   width: 2em;
   will-change: background-color;
+  transition: background-color 300ms ease;
   background-color: ${props => theme(props.theme.main).cardBg};
   border-radius: 1em;
 
   input {
     position: absolute;
     opacity: 0;
+  }
+
+  input + div {
+    transition: transform 300ms ease;
   }
 
   input:checked + div {
