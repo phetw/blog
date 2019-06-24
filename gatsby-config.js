@@ -61,6 +61,7 @@ module.exports = {
               quality: 65,
               maxWidth: 800,
               withWebp: true,
+              backgroundColor: 'transparent',
               wrapperStyle: 'margin-left:0!important;margin-right:0!important;',
               linkImagesToOriginal: false,
             },
