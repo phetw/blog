@@ -14,15 +14,6 @@ module.exports = {
         path: `${__dirname}/static/img`,
       },
     },
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://wasuwat.me/blog',
-        sitemap: 'https://wasuwat.me/blog/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
@@ -30,18 +21,6 @@ module.exports = {
       options: {
         useMozJpeg: true,
         stripMetadata: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `wasuwat.me`,
-        short_name: `wasuwat.me`,
-        start_url: `/blog/`,
-        background_color: `#F4F6FA`,
-        theme_color: `#4C566A`,
-        icon: 'static/favicon.png',
-        display: `fullscreen`,
       },
     },
     'gatsby-transformer-sharp',
@@ -107,6 +86,15 @@ module.exports = {
         trackingId: 'UA-128174751-2',
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://wasuwat.me/blog',
+        sitemap: 'https://wasuwat.me/blog/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify',
