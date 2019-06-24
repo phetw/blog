@@ -35,7 +35,7 @@ module.exports = {
       options: {
         useMozJpeg: true,
         stripMetadata: true,
-        defaultQuality: 75,
+        defaultQuality: 70,
       },
     },
     'gatsby-transformer-sharp',
@@ -61,7 +61,6 @@ module.exports = {
               quality: 65,
               maxWidth: 800,
               withWebp: true,
-              tracedSVG: true,
               wrapperStyle: 'margin-left:0!important;margin-right:0!important;',
               linkImagesToOriginal: false,
             },
