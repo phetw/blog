@@ -12,4 +12,4 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/rappad/blog.svg?style=flat-square)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/rappad/blog.svg?style=flat-square)
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Greenkeeper badge](https://badges.greenkeeper.io/rappad/blog.svg)](https://greenkeeper.io/)
