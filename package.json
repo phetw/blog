@@ -4,17 +4,6 @@
   "version": "2.0.0",
   "author": "Wasuwat Limsuparhat <wasuwat.se@gmail.com>",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "scripts": {
     "dev": "gatsby develop -p 1234 -o",
     "build": "gatsby build",
@@ -23,7 +12,6 @@
     "deploy": "yarn rm-cache && yarn build-prefix && gh-pages -d public -m 'autodeploy [ci skip]'"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.2",
     "gatsby": "^2.10.4",
     "gatsby-image": "^2.2.3",
     "gatsby-plugin-sitemap": "^2.2.0",
@@ -54,6 +42,7 @@
     "typography-theme-grand-view": "^0.16.19"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.2",
     "gh-pages": "^2.0.1",
     "husky": "^2.5.0",
     "lint-staged": "^8.2.1",
