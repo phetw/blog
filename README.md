@@ -1,6 +1,7 @@
 ### personal blog
 
 [![CircleCI](https://circleci.com/gh/rappad/blog/tree/master.svg?style=svg)](https://circleci.com/gh/rappad/blog/tree/master)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6ce6a6d6-c137-4f44-a6ca-a924c5c94b02/deploy-status)](https://app.netlify.com/sites/wasuwat-blog/deploys)
 
 
 
