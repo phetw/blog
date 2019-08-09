@@ -35,7 +35,7 @@ module.exports = {
       options: {
         useMozJpeg: true,
         stripMetadata: true,
-        defaultQuality: 70,
+        defaultQuality: 60,
       },
     },
     'gatsby-transformer-sharp',
@@ -58,7 +58,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              quality: 65,
+              quality: 60,
               maxWidth: 800,
               withWebp: true,
               backgroundColor: 'transparent',
