@@ -57,7 +57,13 @@ export default class ThemeToggler extends PureComponent {
     return (
       <SwitchContainer>
         <Switch>
-          <input type="checkbox" checked={checked} onClick={onClick} readOnly />{' '}
+          <input
+            style={{ cursor: 'pointer' }}
+            type="checkbox"
+            checked={checked}
+            onClick={onClick}
+            readOnly
+          />{' '}
           <SwitchButton />
         </Switch>
       </SwitchContainer>
