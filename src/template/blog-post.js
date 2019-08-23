@@ -61,12 +61,12 @@ const BlogTemplate = memo(
     <Fragment>
       <Helmet
         htmlAttributes={{ lang: 'en' }}
-        title={`${post.frontmatter.title} - ${site.siteMetadata.title}`}
+        title={`${post.frontmatter.title}`}
         meta={[
           { name: 'author', content: site.siteMetadata.author },
           {
             name: 'description',
-            content: `${post.frontmatter.description}| ${post.excerpt} `,
+            content: `${post.excerpt}`,
           },
           { name: 'og:title', content: post.frontmatter.title },
           {
