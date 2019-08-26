@@ -21,7 +21,7 @@ JavaScript
 
 ## A
 
-APIs _(Twillio, Stripe, Shopify)_
+APIs (Twillio, Stripe, Shopify)
 
 ## M
 
@@ -37,6 +37,6 @@ Markdown
 
 _EZ..._
 
-นอกจาก Gatsby ก็ยังมีตัวเลือก static site generator อื่นๆอย่างเช่น _React static, Hugo, Jekyll_ และอีกมากมายให้เลือกใช้ตามใจชอบ แถมหลายปีมานี้ก็มี CMS ผุดขึ้นเป็นดอกเห็ด _Prismic.io, Contentful_ และอีกมากมายให้เลือกใช้ เกิดอยากจะ decouple เว็บของเราไปให้พวก content creators ใช้งานง่ายๆงี้
+นอกจาก Gatsby ก็ยังมีตัวเลือก static site generator อื่นๆอย่างเช่น React static, Hugo, Jekyll และอีกมากมายให้เลือกใช้ตามใจชอบ แถมหลายปีมานี้ก็มี CMS ผุดขึ้นเป็นดอกเห็ด Prismic.io, Contentful และอีกมากมายให้เลือกใช้ เกิดอยากจะ decouple เว็บของเราไปให้พวก content creators ใช้งานง่ายๆงี้
 
 หากต้องการดูตัวอย่างเพิ่มเติมว่าเว็บไหนใช้ JAM stack และใช้ technologies อะไรบ้าง ให้เข้าไปดู show case ของ JAM stack เพิ่มเติมได้ที่ [show case](https://jamstack.org/examples/) ครับ ไปลองดูกันเองว่าเร็วจริงไหม
