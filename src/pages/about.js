@@ -12,7 +12,7 @@ import Card from '../components/profile/Card'
 import Topic from '../components/blog/Title'
 import Detail from '../components/blog/Content'
 
-const SocialWrapper = styled.section`
+const SocialMedias = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -25,11 +25,11 @@ const SocialWrapper = styled.section`
   }
 `
 
-const DotSeparator = styled.span`
+const Separator = styled.span`
   color: ${props => theme(props.theme.main).menu};
 `
 
-const ImageStyle = {
+const ProfileImage = {
   maxWidth: '140px',
   maxHeight: '140px',
   margin: '0.75rem 0',
@@ -44,7 +44,7 @@ const About = memo(props => (
       <Img
         title="My profile picture"
         alt="My profile picture"
-        style={ImageStyle}
+        style={ProfileImage}
         imgStyle={{
           borderRadius: '50%',
         }}
@@ -53,26 +53,25 @@ const About = memo(props => (
       <Topic>Who Am I </Topic>
       <Detail>
         Hello! <span role="img">🙏</span> My name is Wasuwat Limsuparhat (Phet),
-        I am a Javascript developer and a web development enthusiast based in
-        Bangkok, Thailand.
+        I am a web developer -- born and raised in Bangkok, Thailand.
       </Detail>
       <br />
       <Topic>What I do</Topic>
       <Detail>
         Over the past years, my works primarily focus on enterprise front-end
-        web development with React.js as well as Angular projects. However, I am
-        comfortable with any Javascript-based front-end and back-end frameworks.
+        web development with Javascript-based frameworks. I am obsess about web
+        performance and smooth animations.
       </Detail>
       <br />
       <Topic>Other interests</Topic>
       <Detail>
         I like readings and learning things, but I tends to forget very easily
-        which is the primary reason why I started writing blogs. I play games
-        and I do love watching and playing football.
+        which is the primary reason why I started writing blogs. I occasionally
+        play games and I do love watching and playing football.
       </Detail>
       <br />
       <Topic>Get in touch</Topic>
-      <SocialWrapper>
+      <SocialMedias>
         <a
           rel="noopener noreferrer"
           target="_blank"
@@ -80,7 +79,7 @@ const About = memo(props => (
         >
           GitHub
         </a>
-        <DotSeparator>•</DotSeparator>
+        <Separator>•</Separator>
         <a
           rel="noopener noreferrer"
           target="_blank"
@@ -88,7 +87,7 @@ const About = memo(props => (
         >
           LinkedIn
         </a>
-      </SocialWrapper>
+      </SocialMedias>
     </Card>
   </Layout>
 ))
