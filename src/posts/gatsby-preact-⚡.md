@@ -2,8 +2,10 @@
 title: Gatsby + Preact = ⚡
 description: Faster than Gatsby ? It's Gatsby + Preact
 date: 2019-08-28T08:15:26.460Z
-thumbnail: /img/andrew-ly-ds9dtiorpjy-unsplash.jpg
+thumbnail: /img/andrew-ly-ds9dtiorpjy-unsplash-1-.jpg
 ---
+![Fast bike riding along the road](/img/andrew-ly-ds9dtiorpjy-unsplash-1-.jpg "Fast bike riding along the road")
+
 Gatsby is a React-based framework that generally generates a static website which is already excellent in performance. 
 
 But for some web performance geek like me, there is always a way to further improve things.
