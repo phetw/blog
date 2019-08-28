@@ -53,7 +53,7 @@ const About = memo(props => (
       <Topic>Who Am I </Topic>
       <Detail>
         Hello! <span role="img">🙏</span> My name is Wasuwat Limsuparhat (Phet),
-        I am a web developer -- born and raised in Bangkok, Thailand.
+        I am a web developer - born and raised in Bangkok, Thailand.
       </Detail>
       <br />
       <Topic>What I do</Topic>
