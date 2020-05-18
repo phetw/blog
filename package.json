@@ -35,7 +35,7 @@
     "gatsby-transformer-remark": "^2.6.12",
     "gatsby-transformer-sharp": "^2.2.6",
     "netlify-cms-app": "^2.11.19",
-    "preact": "^10.0.0-rc.1",
+    "preact": "^10.4.2",
     "prismjs": "^1.17.1",
     "react-helmet": "^6.0.0",
     "react-typography": "^0.16.19",
