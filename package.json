@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^3.0.0",
     "husky": "^4.2.4",
     "lint-staged": "^10.0.3",
     "prettier": "^2.0.0"
